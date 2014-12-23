@@ -34,11 +34,12 @@ div {
 <script type="text/javascript">
 var data;
 $.ajax({
-  url: "log.json",
+  url: "/log.json",
   dataType: "json",
   xhr: function() {
     var xhr = new window.XMLHttpRequest();
-    xhr.addEventListener("progress", function(e){
+    xhr.addEventListener("progress", function(e) {
+      console.log(e);
       if (e.lengthComputable) {
         var p = e.loaded / e.total * 100;
         $("#loading").val(p);
