@@ -1,1 +1,213 @@
-hi
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//code.highcharts.com/highcharts.js"></script>
+<style>
+body, html {
+    height: 100%;
+}
+</style>
+</head>
+
+<body>
+<div id="chart" style="width: 100% !important; height: 100% !important"></div>
+<script type="text/javascript">
+// helper function which hopefully is not bugged
+// returns random integer in [min,max]
+function randint(min,max) { return Math.floor(Math.random()*(max-min+1)+min); }
+
+function randrgb() { return "rgb("+randint(0,255)+","+randint(0,255)+","+randint(0,255)+")"; }
+
+var data = [
+{value:21329,label:"jcchutko",color:randrgb()},
+{value:17664,label:"pisanis",color:randrgb()},
+{value:17107,label:"anguslim",color:randrgb()},
+{value:12756,label:"menyan",color:randrgb()},
+{value:9058,label:"buttbot",color:randrgb()},
+{value:4611,label:"grimesmg",color:randrgb()},
+{value:1057,label:"jcchutko_",color:randrgb()},
+{value:957,label:"cendecki",color:randrgb()},
+{value:861,label:"blitzbot",color:randrgb()},
+{value:830,label:"hyndman",color:randrgb()},
+{value:684,label:"owlbot",color:randrgb()},
+{value:591,label:"a_cat",color:randrgb()},
+{value:571,label:"gurbird",color:randrgb()},
+{value:531,label:"jansohnh",color:randrgb()},
+{value:415,label:"menyan1",color:randrgb()},
+{value:414,label:"manelaj",color:randrgb()},
+{value:360,label:"matarnol",color:randrgb()},
+{value:314,label:"not_a_cat",color:randrgb()},
+{value:308,label:"saudalal",color:randrgb()},
+{value:260,label:"lamy",color:randrgb()},
+{value:237,label:"triviabot",color:randrgb()},
+{value:183,label:"saudalal_",color:randrgb()},
+{value:178,label:"asdf",color:randrgb()},
+{value:167,label:"pisanis1",color:randrgb()},
+{value:128,label:"euank",color:randrgb()},
+{value:124,label:"ahmerz",color:randrgb()},
+{value:107,label:"probably_a_cat",color:randrgb()},
+{value:106,label:"saudalal__",color:randrgb()},
+{value:104,label:"ahmmaged_",color:randrgb()},
+{value:44,label:"gurbird_",color:randrgb()},
+{value:38,label:"grimesmg_",color:randrgb()},
+{value:30,label:"jansohnh1",color:randrgb()},
+{value:28,label:"ahmmaged",color:randrgb()},
+{value:27,label:"xiao",color:randrgb()},
+{value:26,label:"anguslim|butts",color:randrgb()},
+{value:23,label:"reimervbot",color:randrgb()},
+{value:21,label:"debugbot",color:randrgb()},
+{value:21,label:"_____________",color:randrgb()},
+{value:19,label:"cendecki_",color:randrgb()},
+{value:17,label:"galliher",color:randrgb()},
+{value:15,label:"reimerv__bot",color:randrgb()},
+{value:14,label:"reimerv_bot",color:randrgb()},
+{value:14,label:"hyndman_",color:randrgb()},
+{value:13,label:"qifan",color:randrgb()},
+{value:13,label:"erictam",color:randrgb()},
+{value:11,label:"gurbird__",color:randrgb()},
+{value:11,label:"dkieren",color:randrgb()},
+{value:10,label:"ahmmaged1",color:randrgb()},
+{value:9,label:"definitely-not-blitz",color:randrgb()},
+{value:8,label:"not_a_cat__",color:randrgb()},
+{value:7,label:"____________",color:randrgb()},
+{value:6,label:"jansohnh4",color:randrgb()},
+{value:6,label:"certainly_a_cat",color:randrgb()},
+{value:5,label:"volkman",color:randrgb()},
+{value:5,label:"menyan_",color:randrgb()},
+{value:4,label:"jruby",color:randrgb()},
+{value:4,label:"ahmmaged3",color:randrgb()},
+{value:3,label:"other-grimesmg",color:randrgb()},
+{value:3,label:"notanguslim",color:randrgb()},
+{value:3,label:"grimesmg1",color:randrgb()},
+{value:3,label:"ahmmaged2",color:randrgb()},
+{value:3,label:"^",color:randrgb()},
+{value:2,label:"roflbot",color:randrgb()},
+{value:2,label:"deolanka",color:randrgb()},
+{value:2,label:"a_fulltimer_spying",color:randrgb()},
+{value:1,label:"TriviaChampionpisani",color:randrgb()},
+{value:1,label:"Trivia",color:randrgb()},
+{value:1,label:"testbot",color:randrgb()},
+{value:1,label:"reimerv",color:randrgb()},
+{value:1,label:"dickbot",color:randrgb()},
+{value:1,label:"amylee",color:randrgb()},
+{value:1,label:"_",color:randrgb()},
+{value:1,label:"`",color:randrgb()}
+];
+
+$(function () {
+    $('#chart').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false
+        },
+        credits: {
+            enabled: false
+        },
+        title: {
+            text: 'Total messages sent'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.y}</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.y}',
+                },
+                size: '100%'
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'Messages',
+            data: [
+
+["jcchutko", 21329],
+["pisanis", 17664],
+["anguslim", 17107],
+["menyan", 12756],
+["buttbot", 9058],
+["grimesmg", 4611],
+["jcchutko_", 1057],
+["cendecki", 957],
+["blitzbot", 861],
+["hyndman", 830],
+["owlbot", 684],
+["a_cat", 591],
+["gurbird", 571],
+["jansohnh", 531],
+["menyan1", 415],
+["manelaj", 414],
+["matarnol", 360],
+["not_a_cat", 314],
+["saudalal", 308],
+["lamy", 260],
+["triviabot", 237],
+["saudalal_", 183],
+["asdf", 178],
+["pisanis1", 167],
+["euank", 128],
+["ahmerz", 124],
+["probably_a_cat", 107],
+["saudalal__", 106],
+["ahmmaged_", 104],
+["gurbird_", 44],
+["grimesmg_", 38],
+["jansohnh1", 30],
+["ahmmaged", 28],
+["xiao", 27],
+["anguslim|butts", 26],
+["reimervbot", 23],
+["debugbot", 21],
+["_____________", 21],
+["cendecki_", 19],
+["galliher", 17],
+["reimerv__bot", 15],
+["reimerv_bot", 14],
+["hyndman_", 14],
+["qifan", 13],
+["erictam", 13],
+["gurbird__", 11],
+["dkieren", 11],
+["ahmmaged1", 10],
+["definitely-not-blitz", 9],
+["not_a_cat__", 8],
+["____________", 7],
+["jansohnh4", 6],
+["certainly_a_cat", 6],
+["volkman", 5],
+["menyan_", 5],
+["jruby", 4],
+["ahmmaged3", 4],
+["other-grimesmg", 3],
+["notanguslim", 3],
+["grimesmg1", 3],
+["ahmmaged2", 3],
+["^", 3],
+["roflbot", 2],
+["deolanka", 2],
+["a_fulltimer_spying", 2],
+["TriviaChampionpisani", 1],
+["Trivia", 1],
+["testbot", 1],
+["reimerv", 1],
+["dickbot", 1],
+["amylee", 1],
+["_", 1],
+["`", 1]
+
+            ]
+        }]
+    });
+});
+</script>
+buttlyzer 0.0.0
+</body>
+
+</html>
