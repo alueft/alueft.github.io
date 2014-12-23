@@ -8,18 +8,55 @@
 body, html {
     height: 100%;
 }
+div {
+    width: 100%;
+    height: 100%;
+}
+#chart {
+    opacity: 0;
+    position: relative;
+}
+#block, #loading {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 </style>
 </head>
 
 <body>
-<div id="chart" style="width: 100%; height: 100%"></div>
+<div id="chart"></div>
+<div id="block"></div>
+<progress id="loading" max="100" value="0"></progress>
 <script type="text/javascript">
+var data;
+$.ajax({
+  url: "log.json",
+  dataType: "json",
+  xhrFields: {
+    onprogress: function (e) {
+      if (e.lengthComputable) {
+        $("#loading").val(e.loaded / e.total * 100);
+      }
+    }
+  },
+  success: function(response) {
+    data = response;
+    $("#loading").fadeTo(1000,0);
+    $("#block").fadeTo(1000,0);
+    $("#chart").fadeTo(1000,1);
+    $("#block").remove();
+  }
+});
 // helper function which hopefully is not bugged
 // returns random integer in [min,max]
 function randint(min,max) { return Math.floor(Math.random()*(max-min+1)+min); }
 
 $(function () {
-    $('#chart').highcharts({
+    $("#chart").highcharts({
         chart: {
             plotBackgroundColor: null,
             plotBorderWidth: null,
@@ -29,25 +66,25 @@ $(function () {
             enabled: false
         },
         title: {
-            text: 'Total messages sent'
+            text: "Total messages sent"
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.y} ({point.percentage:.2f}%)</b>'
+            pointFormat: "{series.name}: <b>{point.y} ({point.percentage:.2f}%)</b>"
         },
         plotOptions: {
             pie: {
                 allowPointSelect: true,
-                cursor: 'pointer',
+                cursor: "pointer",
                 dataLabels: {
                     enabled: true,
-                    format: '<b>{point.name}</b>: {point.y}',
+                    format: "<b>{point.name}</b>: {point.y}",
                 },
-                size: '100%'
+                size: "100%"
             }
         },
         series: [{
-            type: 'pie',
-            name: 'Messages',
+            type: "pie",
+            name: "Messages",
             data: [
 ["rhellybot", 43430],
 ["jcchutko", 21329],
@@ -129,13 +166,6 @@ $(function () {
     });
 });
 
-$.ajax({
-  url: "log.json",
-  dataType: "json",
-  success: function(response) {
-    console.log("loaded");
-  }
-});
 </script>
 buttlyzer 0.0.0 on <a href="http://www.highcharts.com/">highcharts</a>
 </body>
