@@ -39,6 +39,7 @@ $.ajax({
   xhrFields: {
     onprogress: function (e) {
       if (e.lengthComputable) {
+        console.log(e.loaded / e.total * 100);
         $("#loading").val(e.loaded / e.total * 100);
       }
     }
