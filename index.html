@@ -5,14 +5,15 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//code.highcharts.com/highcharts.js"></script>
 <style>
-body, html {
-    height: 100%;
-}
-div {
-    width: 100%;
-    height: 100%;
+body, html, #wrap, #block {
+    height: 98%;
+    overflow: hidden;
 }
 #chart {
+    width: 100%;
+    height: 94%;
+}
+#chart, #credits {
     opacity: 0;
     position: relative;
 }
@@ -28,6 +29,7 @@ div {
 </head>
 
 <body>
+<div id="wrap">
 <div id="chart"></div>
 <div id="block"></div>
 <progress id="loading" max="100" value="0"></progress>
@@ -46,6 +48,7 @@ $.ajax({
     $("#loading").fadeTo(1000,0);
     $("#block").fadeTo(1000,0);
     $("#chart").fadeTo(1000,1);
+    $("#credits").fadeTo(1000,1);
     $("#block").remove();
   }
 });
@@ -77,7 +80,7 @@ $(function () {
                     enabled: true,
                     format: "<b>{point.name}</b>: {point.y}",
                 },
-                size: "100%"
+                size: "94%"
             }
         },
         series: [{
@@ -165,7 +168,8 @@ $(function () {
 });
 
 </script>
-buttlyzer 0.0.0 on <a href="http://www.highcharts.com/">highcharts</a>
-</body>
+<div id="credits">buttlyzer 0.0.0 on <a href="http://www.highcharts.com/">highcharts</a></div>
 
+</div>
+</body>
 </html>
