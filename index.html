@@ -128,6 +128,14 @@ $(function () {
         }]
     });
 });
+
+$.ajax({
+  url: "log.json",
+  dataType: "json",
+  success: function(response) {
+    console.log("loaded");
+  }
+});
 </script>
 buttlyzer 0.0.0 on <a href="http://www.highcharts.com/">highcharts</a>
 </body>
