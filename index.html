@@ -12,89 +12,11 @@ body, html {
 </head>
 
 <body>
-<div id="chart" style="width: 100% !important; height: 100% !important"></div>
+<div id="chart" style="width: 100%; height: 100%"></div>
 <script type="text/javascript">
 // helper function which hopefully is not bugged
 // returns random integer in [min,max]
 function randint(min,max) { return Math.floor(Math.random()*(max-min+1)+min); }
-
-function randrgb() { return "rgb("+randint(0,255)+","+randint(0,255)+","+randint(0,255)+")"; }
-
-var data = [
-{value:21329,label:"jcchutko",color:randrgb()},
-{value:17664,label:"pisanis",color:randrgb()},
-{value:17107,label:"anguslim",color:randrgb()},
-{value:12756,label:"menyan",color:randrgb()},
-{value:9058,label:"buttbot",color:randrgb()},
-{value:4611,label:"grimesmg",color:randrgb()},
-{value:1057,label:"jcchutko_",color:randrgb()},
-{value:957,label:"cendecki",color:randrgb()},
-{value:861,label:"blitzbot",color:randrgb()},
-{value:830,label:"hyndman",color:randrgb()},
-{value:684,label:"owlbot",color:randrgb()},
-{value:591,label:"a_cat",color:randrgb()},
-{value:571,label:"gurbird",color:randrgb()},
-{value:531,label:"jansohnh",color:randrgb()},
-{value:415,label:"menyan1",color:randrgb()},
-{value:414,label:"manelaj",color:randrgb()},
-{value:360,label:"matarnol",color:randrgb()},
-{value:314,label:"not_a_cat",color:randrgb()},
-{value:308,label:"saudalal",color:randrgb()},
-{value:260,label:"lamy",color:randrgb()},
-{value:237,label:"triviabot",color:randrgb()},
-{value:183,label:"saudalal_",color:randrgb()},
-{value:178,label:"asdf",color:randrgb()},
-{value:167,label:"pisanis1",color:randrgb()},
-{value:128,label:"euank",color:randrgb()},
-{value:124,label:"ahmerz",color:randrgb()},
-{value:107,label:"probably_a_cat",color:randrgb()},
-{value:106,label:"saudalal__",color:randrgb()},
-{value:104,label:"ahmmaged_",color:randrgb()},
-{value:44,label:"gurbird_",color:randrgb()},
-{value:38,label:"grimesmg_",color:randrgb()},
-{value:30,label:"jansohnh1",color:randrgb()},
-{value:28,label:"ahmmaged",color:randrgb()},
-{value:27,label:"xiao",color:randrgb()},
-{value:26,label:"anguslim|butts",color:randrgb()},
-{value:23,label:"reimervbot",color:randrgb()},
-{value:21,label:"debugbot",color:randrgb()},
-{value:21,label:"_____________",color:randrgb()},
-{value:19,label:"cendecki_",color:randrgb()},
-{value:17,label:"galliher",color:randrgb()},
-{value:15,label:"reimerv__bot",color:randrgb()},
-{value:14,label:"reimerv_bot",color:randrgb()},
-{value:14,label:"hyndman_",color:randrgb()},
-{value:13,label:"qifan",color:randrgb()},
-{value:13,label:"erictam",color:randrgb()},
-{value:11,label:"gurbird__",color:randrgb()},
-{value:11,label:"dkieren",color:randrgb()},
-{value:10,label:"ahmmaged1",color:randrgb()},
-{value:9,label:"definitely-not-blitz",color:randrgb()},
-{value:8,label:"not_a_cat__",color:randrgb()},
-{value:7,label:"____________",color:randrgb()},
-{value:6,label:"jansohnh4",color:randrgb()},
-{value:6,label:"certainly_a_cat",color:randrgb()},
-{value:5,label:"volkman",color:randrgb()},
-{value:5,label:"menyan_",color:randrgb()},
-{value:4,label:"jruby",color:randrgb()},
-{value:4,label:"ahmmaged3",color:randrgb()},
-{value:3,label:"other-grimesmg",color:randrgb()},
-{value:3,label:"notanguslim",color:randrgb()},
-{value:3,label:"grimesmg1",color:randrgb()},
-{value:3,label:"ahmmaged2",color:randrgb()},
-{value:3,label:"^",color:randrgb()},
-{value:2,label:"roflbot",color:randrgb()},
-{value:2,label:"deolanka",color:randrgb()},
-{value:2,label:"a_fulltimer_spying",color:randrgb()},
-{value:1,label:"TriviaChampionpisani",color:randrgb()},
-{value:1,label:"Trivia",color:randrgb()},
-{value:1,label:"testbot",color:randrgb()},
-{value:1,label:"reimerv",color:randrgb()},
-{value:1,label:"dickbot",color:randrgb()},
-{value:1,label:"amylee",color:randrgb()},
-{value:1,label:"_",color:randrgb()},
-{value:1,label:"`",color:randrgb()}
-];
 
 $(function () {
     $('#chart').highcharts({
@@ -110,7 +32,7 @@ $(function () {
             text: 'Total messages sent'
         },
         tooltip: {
-            pointFormat: '{series.name}: <b>{point.y}</b>'
+            pointFormat: '{series.name}: <b>{point.y} ({point.percentage:.2f}%)</b>'
         },
         plotOptions: {
             pie: {
@@ -127,7 +49,7 @@ $(function () {
             type: 'pie',
             name: 'Messages',
             data: [
-
+["rhellybot", 43430],
 ["jcchutko", 21329],
 ["pisanis", 17664],
 ["anguslim", 17107],
@@ -207,7 +129,7 @@ $(function () {
     });
 });
 </script>
-buttlyzer 0.0.0
+buttlyzer 0.0.0 on <a href="http://www.highcharts.com/">highcharts</a>
 </body>
 
 </html>
