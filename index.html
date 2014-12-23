@@ -36,17 +36,10 @@ var data;
 $.ajax({
   url: "/log.json",
   dataType: "json",
-  xhr: function() {
-    var xhr = new window.XMLHttpRequest();
-    xhr.addEventListener("progress", function(e) {
-      console.log(e);
-      if (e.lengthComputable) {
-        var p = e.loaded / e.total * 100;
-        $("#loading").val(p);
-        console.log(p);
-      }
-    }, false);
-    return xhr;
+  xhrFields: {
+    onprogress: function(e) {
+      $("#loading").val(e.loaded / 14946758 * 100);
+    }
   },
   success: function(response) {
     data = response;
