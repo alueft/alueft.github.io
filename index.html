@@ -41,49 +41,86 @@ html, body, #wrap, #block {
 <div id="block"></div>
 <progress id="loading" max="100" value="0"></progress>
 <div id="wrap_options"><div id="options">showing total messages sent by <select id="user"></select></div></div>
-<div id="credits">buttlyzer 0.0.0 on <a href="http://www.highcharts.com/">highcharts</a></div>
+<div id="credits">buttlyzer 0.0.1 on <a href="http://www.highcharts.com/">highcharts</a></div>
 </div>
 
 <script type="text/javascript">
-// create chart
-$(function() {
-  $("#chart").highcharts({
-    chart: {
-      plotBackgroundColor: null,
-      plotBorderWidth: null,
-      plotShadow: false
-    },
-    credits: {
-      enabled: false
-    },
-    title: {
-      text: ""
-    },
-    tooltip: {
-      pointFormat: "{series.name}: <b>{point.y} ({point.percentage:.2f}%)</b>"
-    },
-    plotOptions: {
-      pie: {
-        allowPointSelect: true,
-        cursor: "pointer",
-        dataLabels: {
-          enabled: true,
-          format: "<b>{point.name}</b>: {point.y}",
-        },
-        size: "90%"
-      }
-    },
-    series: [{
-      type: "pie",
-      name: "Messages"
-    }]
-  });
+Highcharts.setOptions({
+  global: {
+    timezoneOffset: 8*60
+  }
 });
+
+var pie_options = {
+  chart: {
+    renderTo: "chart",
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false
+  },
+  credits: {
+    enabled: false
+  },
+  title: {
+    text: ""
+  },
+  tooltip: {
+    pointFormat: "{series.name}: <b>{point.y} ({point.percentage:.2f}%)</b>"
+  },
+  plotOptions: {
+    pie: {
+      cursor: "pointer",
+      dataLabels: {
+        enabled: true,
+        format: "<b>{point.name}</b>: {point.y}",
+      },
+      size: "90%"
+    }
+  }
+};
+
+var column_options = {
+  chart: {
+    renderTo: "chart",
+    plotBackgroundColor: null,
+    plotBorderWidth: null,
+    plotShadow: false
+  },
+  credits: {
+    enabled: false
+  },
+  title: {
+    text: ""
+  },
+  tooltip: {
+    headerFormat: "{point.x:%a %b. %e}<br>",
+    pointFormat: "{series.name}: <b>{point.y}</b>"
+  },
+  xAxis: {
+    type: "datetime",
+    dateTimeLabelFormats: {
+      day: "%b. %e",
+      week: "%b. %e"
+    },
+    min: Date.UTC(2014,9,22),
+    max: Date.UTC(2014,11,20)
+  },
+  yAxis: {
+    title: {
+      text: "Messages"
+    },
+    min: 0
+  }
+};
+
+// create chart
+var hchart = new Highcharts.Chart(pie_options);
 
 var data = null;
 var user_num = {};
 var user_num_array = [];
 var user_list = [];
+var orig_options = {};
 
 // load json log
 $.ajax({
@@ -138,7 +175,12 @@ $.ajax({
     user_num_array.push(["Other", other]);
 
     var chart = $("#chart").highcharts();
-    chart.series[0].setData(user_num_array);
+
+    // populate original options
+    orig_options.type = "pie";
+    orig_options.name = "Messages";
+    orig_options.data = user_num_array;
+    chart.addSeries(orig_options);
 
     // fade in/out
     $("#loading").fadeTo(1000,0);
@@ -150,9 +192,45 @@ $.ajax({
   }
 });
 
-// TODO: drilldown line graph?
+// show line graph of messages by day
 $("#user").change(function() {
-  console.log("user changed to " + $("#user").val());
+  var point = null;
+  var us = $("#user").val();
+  hchart.destroy();
+  if (us === "all users") {
+    hchart = new Highcharts.Chart(pie_options);
+    $("#chart").highcharts().addSeries(orig_options);
+  }
+  else {
+    var d = [];
+    var g = 60*60*24;
+    var dv = -1;
+    var t = 0;
+    // group data by intervals of g
+    for (var i = 0; i < data.length; i++) {
+      if (data[i].from !== us) {
+        continue;
+      }
+      var cv = data[i].time-60*60*8; // convert to PST
+      if (dv === -1) {
+        t++;
+        dv = cv;
+      }
+      else if (Math.floor(cv/g) === Math.floor(dv/g)) {
+        t++;
+      }
+      else {
+        d.push([dv*1000,t]);
+        t = 0;
+        dv = cv;
+      }
+    }
+    if (t > 0) {
+      d.push([dv*1000,t]);
+    }
+    hchart = new Highcharts.Chart(column_options);
+    $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});
+  }
 });
 </script>
 </body>
