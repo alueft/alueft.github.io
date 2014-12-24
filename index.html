@@ -93,7 +93,6 @@ var column_options = {
     text: ""
   },
   tooltip: {
-    headerFormat: "{point.x:%a %b. %e}<br>",
     pointFormat: "{series.name}: <b>{point.y}</b>"
   },
   xAxis: {
@@ -204,6 +203,7 @@ $("#user").change(function() {
   else {
     var d = [];
     var g = 60*60*24;
+    var tz = 60*60*8;
     var dv = -1;
     var t = 0;
     // group data by intervals of g
@@ -211,22 +211,22 @@ $("#user").change(function() {
       if (data[i].from !== us) {
         continue;
       }
-      var cv = data[i].time-60*60*8; // convert to PST
+      var cv = data[i].time;
       if (dv === -1) {
         t++;
         dv = cv;
       }
-      else if (Math.floor(cv/g) === Math.floor(dv/g)) {
+      else if (Math.floor((cv+tz)/g) === Math.floor((dv+tz)/g)) {
         t++;
       }
       else {
-        d.push([dv*1000,t]);
+        d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
         t = 0;
         dv = cv;
       }
     }
     if (t > 0) {
-      d.push([dv*1000,t]);
+      d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
     }
     hchart = new Highcharts.Chart(column_options);
     $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});
