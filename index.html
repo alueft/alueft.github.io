@@ -47,16 +47,13 @@ html, body, #wrap, #block {
 <script type="text/javascript">
 Highcharts.setOptions({
   global: {
-    timezoneOffset: 8*60
+    timezoneOffset: 8*60 // PST
   }
 });
 
 var pie_options = {
   chart: {
     renderTo: "chart",
-    plotBackgroundColor: null,
-    plotBorderWidth: null,
-    plotShadow: false
   },
   credits: {
     enabled: false
@@ -65,7 +62,7 @@ var pie_options = {
     text: ""
   },
   tooltip: {
-    pointFormat: "{series.name}: <b>{point.y} ({point.percentage:.2f}%)</b>"
+    pointFormat: "{series.name}: <b>{point.y}</b> ({point.percentage:.2f}%)"
   },
   plotOptions: {
     pie: {
@@ -112,7 +109,7 @@ var column_options = {
   }
 };
 
-// create chart
+// create pie chart
 var hchart = new Highcharts.Chart(pie_options);
 
 var data = null;
@@ -162,6 +159,8 @@ $.ajax({
         }
       }
     }
+
+    // sort by decreasing number of messages and add "Other" at the end
     user_num_array.sort(function(a, b) {
       if (a[1] > b[1]) {
         return -1;
@@ -173,13 +172,11 @@ $.ajax({
     });
     user_num_array.push(["Other", other]);
 
-    var chart = $("#chart").highcharts();
-
     // populate original options
     orig_options.type = "pie";
     orig_options.name = "Messages";
     orig_options.data = user_num_array;
-    chart.addSeries(orig_options);
+    $("#chart").highcharts().addSeries(orig_options);
 
     // fade in/out
     $("#loading").fadeTo(1000,0);
@@ -191,9 +188,8 @@ $.ajax({
   }
 });
 
-// show line graph of messages by day
+// show line chart of messages by day (or the original pie chart)
 $("#user").change(function() {
-  var point = null;
   var us = $("#user").val();
   hchart.destroy();
   if (us === "all users") {
