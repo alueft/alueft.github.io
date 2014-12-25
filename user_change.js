@@ -11,7 +11,7 @@ $("#user").change(function() {
     $("#esc").html("");
   }
   else {
-    var d = buttlyzer.user_column_data(us);
+    var d = buttlyzer.user_column_data(us, "all channels");
     buttlyzer.hchart = new Highcharts.Chart(buttlyzer.column_options);
     $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});
     $("#esc").html(" (Esc to return to all users)");
