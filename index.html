@@ -65,7 +65,7 @@ var graphed_users = {};
 var graphed_users_list = [];
 var graphed_users_ind = 0;
 
-// aggregate <1% users, based on threshold, into a single "Other" group
+// aggregate <2% users, based on threshold, into a single "Other" group
 // (re)populates user_num_array, graphed_users, and other_msg
 var generate_other = function(threshold) {
   if (user_num_array_list.length === user_num_array_ind) {
@@ -74,7 +74,7 @@ var generate_other = function(threshold) {
     user_num_array = [];
     for (var user in user_num) {
       if (user_num.hasOwnProperty(user) && !graphed_users.hasOwnProperty(user)) {
-        if (user_num[user] / threshold > 0.01) {
+        if (user_num[user] / threshold > 0.02) {
           user_num_array.push({name: user, y: user_num[user], drilldown: true});
           graphed_users[user] = user_num[user];
         }
