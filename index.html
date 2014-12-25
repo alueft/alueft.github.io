@@ -151,7 +151,7 @@ Highcharts.setOptions({
     timezoneOffset: 8*60 // PST
   },
   lang: {
-    drillUpText: "◁ Back"
+    drillUpText: ""
   }
 });
 
@@ -164,6 +164,7 @@ var pie_options = {
         if (name === "Other") {
           generate_other(other_msg);
           this.addSeriesAsDrilldown(e.point, {type: "pie", name: "Messages", data: user_num_array, showInLegend: false});
+          $("#esc").html(" (Esc to go back one level)");
         }
         else {
           var d = user_column_data(name);
@@ -183,6 +184,9 @@ var pie_options = {
           user_num_array = user_num_array_list[user_num_array_ind];
           other_msg = other_msg_list[other_msg_ind];
           graphed_users = graphed_users_list[graphed_users_ind];
+          if (user_num_array_ind === 1) {
+            $("#esc").html("");
+          }
         }
       }
     }
@@ -321,15 +325,22 @@ $("#user").change(function() {
 
 // return to all users if we're not already at it and Esc is pressed
 $(document).keydown(function(e) {
-  if (e.which === 27 && $("#user").val() !== "all users") {
-    hchart.destroy();
-    hchart = new Highcharts.Chart(pie_options);
-    $("#chart").highcharts().addSeries(orig_options);
-    user_num_array_ind = 1;
-    other_msg_ind = 1;
-    graphed_users_ind = 1;
-    $("#user").val("all users");
-    $("#esc").html("");
+  if (e.which === 27) {
+    if ($("#user").val() === "all users") {
+      if (user_num_array_ind > 1) {
+        hchart.drillUp();
+      }
+    }
+    else {
+      hchart.destroy();
+      hchart = new Highcharts.Chart(pie_options);
+      $("#chart").highcharts().addSeries(orig_options);
+      user_num_array_ind = 1;
+      other_msg_ind = 1;
+      graphed_users_ind = 1;
+      $("#user").val("all users");
+      $("#esc").html("");
+    }
   }
 });
 </script>
