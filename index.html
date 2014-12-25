@@ -165,15 +165,23 @@ var pie_options = {
           generate_other(other_msg);
           this.addSeriesAsDrilldown(e.point, {type: "pie", name: "Messages", data: user_num_array, showInLegend: false});
         }
+        else {
+          var d = user_column_data(name);
+          hchart.destroy();
+          hchart = new Highcharts.Chart(column_options);
+          $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});
+        }
       },
       drillup: function(e) {
-        // revert to previously generated values
-        user_num_array_ind--;
-        other_msg_ind--;
-        graphed_users_ind--;
-        user_num_array = user_num_array_list[user_num_array_ind];
-        other_msg = other_msg_list[other_msg_ind];
-        graphed_users = graphed_users_list[graphed_users_ind];
+        if (e.seriesOptions.type == "pie") {
+          // revert to previously generated values
+          user_num_array_ind--;
+          other_msg_ind--;
+          graphed_users_ind--;
+          user_num_array = user_num_array_list[user_num_array_ind];
+          other_msg = other_msg_list[other_msg_ind];
+          graphed_users = graphed_users_list[graphed_users_ind];
+        }
       }
     }
   },
@@ -296,6 +304,9 @@ $("#user").change(function() {
   if (us === "all users") {
     hchart = new Highcharts.Chart(pie_options);
     $("#chart").highcharts().addSeries(orig_options);
+    user_num_array_ind = 1;
+    other_msg_ind = 1;
+    graphed_users_ind = 1;
   }
   else {
     var d = user_column_data(us);
