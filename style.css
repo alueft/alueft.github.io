@@ -1,0 +1,27 @@
+html, body, #wrap, #block {
+  height: 98%;
+  overflow: hidden;
+}
+#chart {
+  width: 100%;
+  height: 90%;
+}
+#chart, #credits {
+  opacity: 0;
+  position: relative;
+}
+#block, #loading {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+#wrap_options {
+  text-align: center;
+}
+#options {
+  opacity: 0;
+  display: inline-block;
+}
