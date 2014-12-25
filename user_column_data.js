@@ -20,13 +20,13 @@ buttlyzer.user_column_data = function(u) {
       t++;
     }
     else {
-      d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
-      t = 0;
+      d.push([(Math.floor((dv+tz)/g)*g-2*tz)*1000,t]);
+      t = 1;
       dv = cv;
     }
   }
   if (t > 0) {
-    d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
+    d.push([(Math.floor((dv+tz)/g)*g-2*tz)*1000,t]);
   }
   return d;
 };
