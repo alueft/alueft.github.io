@@ -11,6 +11,7 @@ $.ajax({
     buttlyzer.data = response;
     for (var i = 0; i < buttlyzer.data.length; i++) {
       var f = buttlyzer.data[i].f;
+      var t = buttlyzer.data[i].t;
       if (buttlyzer.user_num.hasOwnProperty(f)) {
         buttlyzer.user_num[f]++;
       }
@@ -18,13 +19,24 @@ $.ajax({
         buttlyzer.user_list.push(f);
         buttlyzer.user_num[f] = 1;
       }
+      if (buttlyzer.channel_list.indexOf(t) < 0) {
+        buttlyzer.channel_list.push(t);
+      }
     }
+
     buttlyzer.user_list.sort(function(a, b) {
       return a.localeCompare(b);
     });
     $("#user").append(new Option("all users", "all users"));
     for (var i = 0; i < buttlyzer.user_list.length; i++) {
       $("#user").append(new Option(buttlyzer.user_list[i], buttlyzer.user_list[i]));
+    }
+    buttlyzer.channel_list.sort(function(a, b) {
+      return a.localeCompare(b);
+    });
+    $("#channel").append(new Option("all channels", "all channels"));
+    for (var i = 0; i < buttlyzer.channel_list.length; i++) {
+      $("#channel").append(new Option(buttlyzer.channel_list[i], buttlyzer.channel_list[i]));
     }
 
     buttlyzer.generate_users(buttlyzer.data.length);

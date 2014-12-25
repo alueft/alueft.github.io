@@ -9,6 +9,9 @@ buttlyzer.user_num = {};
 // user list to sort and display
 buttlyzer.user_list = [];
 
+// channel list to sort and display
+buttlyzer.channel_list = [];
+
 // {type: "pie", name: "Messages", data: initial pie graph data}
 buttlyzer.orig_options = {};
 
