@@ -4,18 +4,19 @@ $.ajax({
   xhrFields: {
     onprogress: function(e) {
       // log file size is hardcoded here
-      $("#loading").val(e.loaded / 14946758 * 100);
+      $("#loading").val(e.loaded / 12921488 * 100);
     }
   },
   success: function(response) {
     buttlyzer.data = response;
     for (var i = 0; i < buttlyzer.data.length; i++) {
-      if (buttlyzer.user_num.hasOwnProperty(buttlyzer.data[i].from)) {
-        buttlyzer.user_num[buttlyzer.data[i].from]++;
+      var f = buttlyzer.data[i].f;
+      if (buttlyzer.user_num.hasOwnProperty(f)) {
+        buttlyzer.user_num[f]++;
       }
       else {
-        buttlyzer.user_list.push(buttlyzer.data[i].from);
-        buttlyzer.user_num[buttlyzer.data[i].from] = 1;
+        buttlyzer.user_list.push(f);
+        buttlyzer.user_num[f] = 1;
       }
     }
     buttlyzer.user_list.sort(function(a, b) {

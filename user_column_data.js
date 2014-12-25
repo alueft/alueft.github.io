@@ -8,10 +8,10 @@ buttlyzer.user_column_data = function(u) {
   var t = 0;
   // group data by intervals of g
   for (var i = 0; i < buttlyzer.data.length; i++) {
-    if (buttlyzer.data[i].from !== u) {
+    if (buttlyzer.data[i].f !== u) {
       continue;
     }
-    var cv = buttlyzer.data[i].time;
+    var cv = buttlyzer.data[i].d;
     if (dv === -1) {
       t++;
       dv = cv;
