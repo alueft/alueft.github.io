@@ -5,11 +5,13 @@ buttlyzer.pie_options = {
       drilldown: function(e) {
         var name = e.point.name;
         if (name === "Other") {
+          // drilldown to another pie chart
           buttlyzer.generate_users(buttlyzer.other_msg);
           this.addSeriesAsDrilldown(e.point, {type: "pie", name: "Messages", data: buttlyzer.user_num_array, showInLegend: false});
           $("#esc").html(" (Esc to go back one level)");
         }
         else {
+          // create new column chart
           var d = buttlyzer.user_column_data(name);
           buttlyzer.hchart.destroy();
           buttlyzer.hchart = new Highcharts.Chart(buttlyzer.column_options);
