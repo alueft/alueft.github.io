@@ -41,8 +41,8 @@ html, body, #wrap, #block {
 <div id="chart"></div>
 <div id="block"></div>
 <progress id="loading" max="100" value="0"></progress>
-<div id="wrap_options"><div id="options">showing total messages sent by <select id="user"></select></div></div>
-<div id="credits">buttlyzer 0.0.2 on <a href="http://www.highcharts.com/">highcharts</a></div>
+<div id="wrap_options"><div id="options">showing total messages sent by <select id="user"></select><span id="esc"></span></div></div>
+<div id="credits">buttlyzer 0.0.3 on <a href="http://www.highcharts.com/">highcharts</a></div>
 </div>
 
 <script type="text/javascript">
@@ -171,6 +171,7 @@ var pie_options = {
           hchart = new Highcharts.Chart(column_options);
           $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});
           $("#user").val(name);
+          $("#esc").html(" (Esc to return to all users)");
         }
       },
       drillup: function(e) {
@@ -220,10 +221,7 @@ var pie_options = {
 
 var column_options = {
   chart: {
-    renderTo: "chart",
-    plotBackgroundColor: null,
-    plotBorderWidth: null,
-    plotShadow: false
+    renderTo: "chart"
   },
   credits: {
     enabled: false
@@ -311,11 +309,27 @@ $("#user").change(function() {
     user_num_array_ind = 1;
     other_msg_ind = 1;
     graphed_users_ind = 1;
+    $("#esc").html("");
   }
   else {
     var d = user_column_data(us);
     hchart = new Highcharts.Chart(column_options);
     $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});
+    $("#esc").html(" (Esc to return to all users)");
+  }
+});
+
+// return to all users if we're not already at it and Esc is pressed
+$(document).keydown(function(e) {
+  if (e.which === 27 && $("#user").val() !== "all users") {
+    hchart.destroy();
+    hchart = new Highcharts.Chart(pie_options);
+    $("#chart").highcharts().addSeries(orig_options);
+    user_num_array_ind = 1;
+    other_msg_ind = 1;
+    graphed_users_ind = 1;
+    $("#user").val("all users");
+    $("#esc").html("");
   }
 });
 </script>
