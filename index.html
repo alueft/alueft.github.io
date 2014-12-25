@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="//code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/drilldown.js"></script>
 <style>
 html, body, #wrap, #block {
   height: 98%;
@@ -45,6 +46,45 @@ html, body, #wrap, #block {
 </div>
 
 <script type="text/javascript">
+var data = null;
+var user_num = {};
+var user_num_array = [];
+var user_list = [];
+var orig_options = {};
+
+// returns data for column graph
+// parameter u: string denoting user name
+var user_column_data = function(u) {
+  var d = [];
+  var g = 60*60*24;
+  var tz = 60*60*8;
+  var dv = -1;
+  var t = 0;
+  // group data by intervals of g
+  for (var i = 0; i < data.length; i++) {
+    if (data[i].from !== u) {
+      continue;
+    }
+    var cv = data[i].time;
+    if (dv === -1) {
+      t++;
+      dv = cv;
+    }
+    else if (Math.floor((cv+tz)/g) === Math.floor((dv+tz)/g)) {
+      t++;
+    }
+    else {
+      d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
+      t = 0;
+      dv = cv;
+    }
+  }
+  if (t > 0) {
+    d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
+  }
+  return d;
+};
+
 Highcharts.setOptions({
   global: {
     timezoneOffset: 8*60 // PST
@@ -54,6 +94,11 @@ Highcharts.setOptions({
 var pie_options = {
   chart: {
     renderTo: "chart",
+    events: {
+      drilldown: function(e) {
+        console.log("clicked on " + e.point.name);
+      }
+    }
   },
   credits: {
     enabled: false
@@ -65,14 +110,22 @@ var pie_options = {
     pointFormat: "{series.name}: <b>{point.y}</b> ({point.percentage:.2f}%)"
   },
   plotOptions: {
-    pie: {
+    series: {
       cursor: "pointer",
       dataLabels: {
         enabled: true,
         format: "<b>{point.name}</b>: {point.y}",
       },
+      data: [],
       size: "90%"
     }
+  },
+  drilldown: {
+    activeDataLabelStyle: {
+      textDecoration: "none",
+      fontWeight: "normal",
+    },
+    series: []
   }
 };
 
@@ -112,12 +165,6 @@ var column_options = {
 // create pie chart
 var hchart = new Highcharts.Chart(pie_options);
 
-var data = null;
-var user_num = {};
-var user_num_array = [];
-var user_list = [];
-var orig_options = {};
-
 // load json log
 $.ajax({
   url: "/log.json",
@@ -152,7 +199,7 @@ $.ajax({
     for (var prop in user_num) {
       if (user_num.hasOwnProperty(prop)) {
         if (user_num[prop] / data.length > 0.01) {
-          user_num_array.push([prop, user_num[prop]]);
+          user_num_array.push({name: prop, y: user_num[prop], drilldown: true});
         }
         else {
           other += user_num[prop];
@@ -162,15 +209,15 @@ $.ajax({
 
     // sort by decreasing number of messages and add "Other" at the end
     user_num_array.sort(function(a, b) {
-      if (a[1] > b[1]) {
+      if (a.y > b.y) {
         return -1;
       }
-      if (a[1] < b[1]) {
+      if (a.y < b.y) {
         return 1;
       }
       return 0;
     });
-    user_num_array.push(["Other", other]);
+    user_num_array.push({name: "Other", y: other, drilldown: true});
 
     // populate original options
     orig_options.type = "pie";
@@ -197,33 +244,7 @@ $("#user").change(function() {
     $("#chart").highcharts().addSeries(orig_options);
   }
   else {
-    var d = [];
-    var g = 60*60*24;
-    var tz = 60*60*8;
-    var dv = -1;
-    var t = 0;
-    // group data by intervals of g
-    for (var i = 0; i < data.length; i++) {
-      if (data[i].from !== us) {
-        continue;
-      }
-      var cv = data[i].time;
-      if (dv === -1) {
-        t++;
-        dv = cv;
-      }
-      else if (Math.floor((cv+tz)/g) === Math.floor((dv+tz)/g)) {
-        t++;
-      }
-      else {
-        d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
-        t = 0;
-        dv = cv;
-      }
-    }
-    if (t > 0) {
-      d.push([(Math.floor(dv/g)*g+tz)*1000,t]);
-    }
+    var d = user_column_data(us);
     hchart = new Highcharts.Chart(column_options);
     $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});
   }
