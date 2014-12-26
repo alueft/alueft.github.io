@@ -9,29 +9,26 @@ $.ajax({
   },
   success: function(response) {
     buttlyzer.data = response;
-    for (var i = 0; i < buttlyzer.data.length; i++) {
-      var f = buttlyzer.data[i].f;
-      var t = buttlyzer.data[i].t;
-      if (buttlyzer.user_num.hasOwnProperty(f)) {
-        buttlyzer.user_num[f]++;
-      }
-      else {
-        buttlyzer.user_list.push(f);
-        buttlyzer.user_num[f] = 1;
-      }
-      if (buttlyzer.channel_list.indexOf(t) < 0) {
-        buttlyzer.channel_list.push(t);
-      }
-      buttlyzer.total_messages++;
-    }
+
+    // generate users
+    buttlyzer.count_messages("all channels");
     buttlyzer.generate_users(buttlyzer.total_messages);
 
+    // sort user list
     buttlyzer.user_list.sort(function(a, b) {
       return a.localeCompare(b);
     });
     $("#user").append(new Option("all users", "all users"));
     for (var i = 0; i < buttlyzer.user_list.length; i++) {
       $("#user").append(new Option(buttlyzer.user_list[i], buttlyzer.user_list[i]));
+    }
+
+    // generate and sort channel list
+    for (var i = 0; i < buttlyzer.data.length; i++) {
+      var t = buttlyzer.data[i].t;
+      if (buttlyzer.channel_list.indexOf(t) < 0) {
+        buttlyzer.channel_list.push(t);
+      }
     }
     buttlyzer.channel_list.sort(function(a, b) {
       return a.localeCompare(b);
