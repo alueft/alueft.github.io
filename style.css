@@ -1,9 +1,6 @@
 html, body, #wrap, #block {
   height: 99%;
   overflow: hidden;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  transform-style: preserve-3d;
   text-align: center;
 }
 #chart {
@@ -23,9 +20,6 @@ html, body, #wrap, #block {
   bottom: 0;
   left: 0;
   right: 0;
-}
-#wrap_options {
-  text-align: center;
 }
 #options {
   opacity: 0;
