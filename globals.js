@@ -1,5 +1,3 @@
-var buttlyzer = buttlyzer = buttlyzer || {};
-
 // size of log file
 buttlyzer.log_size = 7127357;
 

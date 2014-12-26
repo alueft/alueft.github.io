@@ -1,14 +1,20 @@
 html, body, #wrap, #block {
-  height: 98%;
+  height: 99%;
   overflow: hidden;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  text-align: center;
 }
 #chart {
   width: 100%;
-  height: 90%;
+  top: 30px;
 }
 #chart, #credits {
   opacity: 0;
-  position: relative;
+  position: absolute;
+  font-size: 70%;
+  bottom: 0;
 }
 #block, #loading {
   margin: auto;
