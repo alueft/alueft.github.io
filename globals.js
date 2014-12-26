@@ -6,6 +6,9 @@ buttlyzer.data = null;
 // user => # messages sent
 buttlyzer.user_num = {};
 
+// total messages sent (filtered by channel selection)
+buttlyzer.total_messages = 0;
+
 // user list to sort and display
 buttlyzer.user_list = [];
 

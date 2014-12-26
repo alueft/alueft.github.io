@@ -44,7 +44,7 @@ buttlyzer.pie_options = {
   },
   tooltip: {
     formatter: function() {
-      var p = this.y*100/buttlyzer.data.length;
+      var p = this.y*100/buttlyzer.total_messages;
       return this.point.name+"<br>"+this.series.name+": <b>"+this.y+"</b> ("+p.toFixed(2)+"%)";
     }
   },

@@ -22,8 +22,9 @@ $.ajax({
       if (buttlyzer.channel_list.indexOf(t) < 0) {
         buttlyzer.channel_list.push(t);
       }
+      buttlyzer.total_messages++;
     }
-    buttlyzer.generate_users(buttlyzer.data.length);
+    buttlyzer.generate_users(buttlyzer.total_messages);
 
     buttlyzer.user_list.sort(function(a, b) {
       return a.localeCompare(b);
