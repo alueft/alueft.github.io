@@ -1,5 +1,8 @@
 var buttlyzer = buttlyzer = buttlyzer || {};
 
+// size of log file
+buttlyzer.log_size = 7127357;
+
 // data loaded from json log: [{d: timestamp, f: from, t: to, k: [tokens]}]
 buttlyzer.data = null;
 

@@ -3,8 +3,7 @@ $.ajax({
   dataType: "json",
   xhrFields: {
     onprogress: function(e) {
-      // log file size is hardcoded here
-      $("#loading").val(e.loaded / 12921488 * 100);
+      $("#loading").val(e.loaded / buttlyzer.log_size * 100);
     }
   },
   success: function(response) {
