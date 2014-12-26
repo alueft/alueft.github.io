@@ -13,9 +13,9 @@ $("#channel").change(function() {
   buttlyzer.graphed_users_ind = 0;
   var tm = 0;
   var v = $("#channel").val();
+  // filter all messages by channel (if "all channels" isn't selected)
   for (var i = 0; i < buttlyzer.data.length; i++) {
     var f = buttlyzer.data[i].f;
-    var t = buttlyzer.data[i].t;
     if (v !== "all channels" && buttlyzer.data[i].t !== v) {
       continue;
     }

@@ -23,6 +23,7 @@ $.ajax({
         buttlyzer.channel_list.push(t);
       }
     }
+    buttlyzer.generate_users(buttlyzer.data.length);
 
     buttlyzer.user_list.sort(function(a, b) {
       return a.localeCompare(b);
@@ -38,8 +39,6 @@ $.ajax({
     for (var i = 0; i < buttlyzer.channel_list.length; i++) {
       $("#channel").append(new Option(buttlyzer.channel_list[i], buttlyzer.channel_list[i]));
     }
-
-    buttlyzer.generate_users(buttlyzer.data.length);
 
     // populate original options
     buttlyzer.init_options.type = "pie";
