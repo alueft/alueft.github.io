@@ -1,12 +1,12 @@
 // returns data for column graph
 // u: string denoting user name
-// c: string denoting channel name
-buttlyzer.user_column_data = function(u, c) {
+buttlyzer.user_column_data = function(u) {
   var d = [];
   var g = 60*60*24;
   var tz = 60*60*8;
   var dv = -1;
   var t = 0;
+  var c = $("#channel").val();
   // group data by intervals of g
   for (var i = 0; i < buttlyzer.data.length; i++) {
     if (buttlyzer.data[i].f !== u) {

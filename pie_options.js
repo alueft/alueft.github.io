@@ -12,7 +12,7 @@ buttlyzer.pie_options = {
         }
         else {
           // create new column chart
-          var d = buttlyzer.user_column_data(name, "all channels");
+          var d = buttlyzer.user_column_data(name);
           buttlyzer.hchart.destroy();
           buttlyzer.hchart = new Highcharts.Chart(buttlyzer.column_options);
           $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});

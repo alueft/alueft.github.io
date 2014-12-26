@@ -42,10 +42,10 @@ $.ajax({
     buttlyzer.generate_users(buttlyzer.data.length);
 
     // populate original options
-    buttlyzer.orig_options.type = "pie";
-    buttlyzer.orig_options.name = "Messages";
-    buttlyzer.orig_options.data = buttlyzer.user_num_array;
-    $("#chart").highcharts().addSeries(buttlyzer.orig_options);
+    buttlyzer.init_options.type = "pie";
+    buttlyzer.init_options.name = "Messages";
+    buttlyzer.init_options.data = buttlyzer.user_num_array;
+    $("#chart").highcharts().addSeries(buttlyzer.init_options);
 
     // fade in/out
     $("#loading").fadeTo(1000,0);

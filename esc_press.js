@@ -11,7 +11,7 @@ $(document).keydown(function(e) {
       // go back to all users
       buttlyzer.hchart.destroy();
       buttlyzer.hchart = new Highcharts.Chart(buttlyzer.pie_options);
-      $("#chart").highcharts().addSeries(buttlyzer.orig_options);
+      $("#chart").highcharts().addSeries(buttlyzer.init_options);
       buttlyzer.user_num_array_ind = 1;
       buttlyzer.other_msg_ind = 1;
       buttlyzer.graphed_users_ind = 1;

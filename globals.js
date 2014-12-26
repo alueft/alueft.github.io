@@ -12,8 +12,9 @@ buttlyzer.user_list = [];
 // channel list to sort and display
 buttlyzer.channel_list = [];
 
-// {type: "pie", name: "Messages", data: initial pie graph data}
-buttlyzer.orig_options = {};
+// options for initial pie chart:
+// {type: "pie", name: "Messages", data: initial pie chart data}
+buttlyzer.init_options = {};
 
 // store indices of user_num_array, other_msg, graphed_users
 // increment indices when drilling down
