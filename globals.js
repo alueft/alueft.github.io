@@ -1,8 +1,17 @@
-// size of log file
-buttlyzer.log_size = 7127357;
+// size of log files
+buttlyzer.logs_size = 42203913;
 
-// data loaded from json log: [{d: timestamp, f: from, t: to, k: [tokens]}]
+buttlyzer.loaded_messages = 0;
+buttlyzer.loaded_tokens = 0;
+
+// the current data set, including [{d: timestamp, f: from, t: to}]
 buttlyzer.data = null;
+
+// data loaded from message logs: [{d: timestamp, f: from, t: to}]
+buttlyzer.message_data = null;
+
+// data loaded from token logs: {token name: [{d: timestamp, f: from, t: to}]}
+buttlyzer.token_data = null;
 
 // user => # messages sent
 buttlyzer.user_num = {};
@@ -24,7 +33,6 @@ buttlyzer.init_options = {};
 // increment indices when drilling down
 // decrement indices when drilling up
 // add to lists if the end of the list is hit
-
 // {name: user, y: # messages sent, drilldown: true}
 buttlyzer.user_num_array = [];
 buttlyzer.user_num_array_list = [];

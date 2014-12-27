@@ -1,5 +1,5 @@
 // reset pie chart data, then regraph
-$("#channel").change(function() {
+buttlyzer.reset = function() {
   buttlyzer.user_num_array = [];
   buttlyzer.user_num_array_list = [];
   buttlyzer.user_num_array_ind = 0;
@@ -14,4 +14,6 @@ $("#channel").change(function() {
   buttlyzer.init_options.data = buttlyzer.user_num_array;
 
   buttlyzer.redraw();
-});
+};
+
+$("#channel").change(buttlyzer.reset);

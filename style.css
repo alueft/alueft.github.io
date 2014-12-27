@@ -24,3 +24,16 @@ html, body, #wrap, #block {
   opacity: 0;
   display: inline-block;
 }
+#kmatch {
+  display: none;
+}
+.ui-autocomplete {
+  text-align: left;
+  max-height: 90%;
+  max-width: 50%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.ui-menu-item {
+  list-style-image: none !important;
+}

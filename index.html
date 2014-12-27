@@ -7,7 +7,9 @@
 <meta http-equiv="pragma" content="no-cache">
 <title>the buttlyzer</title>
 <link rel="stylesheet" type="text/css" href="style.css" media="screen"></link>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"></link>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <script src="//code.highcharts.com/highcharts.js"></script>
 <script src="//code.highcharts.com/modules/drilldown.js"></script>
 </head>
@@ -17,21 +19,23 @@
 <div id="chart"></div>
 <div id="block"></div>
 <progress id="loading" max="100" value="0"></progress>
-<div id="options">showing total messages sent by <select id="user"></select> in <select id="channel"></select><span id="esc"></span></div>
-<div id="credits">buttlyzer 0.0.6 on <a href="http://www.highcharts.com/">highcharts</a></div>
+<div id="options"><select id="show"><option value="tm" selected>messages sent</option><option value="tk">tokens sent</option></select><span id="kmatch"> matching text <input id="kinput"></input> </span> by <select id="user"></select> in <select id="channel"></select><span id="esc"></span></div>
+<div id="credits">buttlyzer 0.1.0 on <a href="http://www.highcharts.com/">highcharts</a></div>
 </div>
 
 <script src="buttlyzer.js"></script>
 <script src="globals.js"></script>
+<script src="load_ajax_data.js"></script>
 <script src="load_token_list.js"></script>
 <script src="generate_users.js"></script>
 <script src="count_messages.js"></script>
 <script src="user_column_data.js"></script>
 <script src="pie_options.js"></script>
 <script src="column_options.js"></script>
-<script src="load_log.js"></script>
 <script src="user_change.js"></script>
 <script src="channel_change.js"></script>
+<script src="show_change.js"></script>
 <script src="esc_press.js"></script>
+<script src="tokens.js"></script>
 </body>
 </html>
