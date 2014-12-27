@@ -15,7 +15,7 @@ buttlyzer.user_column_data = function(u) {
     if (c !== 0 && buttlyzer.data[i].t !== c) {
       continue;
     }
-    var cv = buttlyzer.data[i].d;
+    var cv = buttlyzer.data[i].d+1413999466;
     if (dv === -1) {
       t++;
       dv = cv;

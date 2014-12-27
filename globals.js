@@ -1,5 +1,5 @@
 // size of log files
-buttlyzer.logs_size = 24361525;
+buttlyzer.logs_size = 21810847;
 
 // total bytes loaded for each log file
 buttlyzer.loaded_messages = 0;
