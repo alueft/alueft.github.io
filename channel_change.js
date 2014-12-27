@@ -9,7 +9,7 @@ buttlyzer.reset = function() {
   buttlyzer.graphed_users = {};
   buttlyzer.graphed_users_list = [];
   buttlyzer.graphed_users_ind = 0;
-  buttlyzer.count_messages($("#channel").val());
+  buttlyzer.count_messages(buttlyzer.channel_map[$("#channel").val()]);
   buttlyzer.generate_users(buttlyzer.total_messages);
   buttlyzer.init_options.data = buttlyzer.user_num_array;
 

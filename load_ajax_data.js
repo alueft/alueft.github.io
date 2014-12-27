@@ -32,7 +32,7 @@ $.when(
 ).then(function() {
   // at this point both tokens and messages have been loaded
   // generate users
-  buttlyzer.count_messages("all channels");
+  buttlyzer.count_messages(0);
   buttlyzer.generate_users(buttlyzer.total_messages);
   
   // sort user list
@@ -43,18 +43,7 @@ $.when(
   for (var i = 0; i < buttlyzer.user_list.length; i++) {
     $("#user").append(new Option(buttlyzer.user_list[i], buttlyzer.user_list[i]));
   }
-  
-  // generate and sort channel list
-  for (var i = 0; i < buttlyzer.data.length; i++) {
-    var t = buttlyzer.data[i].t;
-    if (buttlyzer.channel_list.indexOf(t) < 0) {
-      buttlyzer.channel_list.push(t);
-    }
-  }
-  buttlyzer.channel_list.sort(function(a, b) {
-    return a.localeCompare(b);
-  });
-  $("#channel").append(new Option("all channels", "all channels"));
+
   for (var i = 0; i < buttlyzer.channel_list.length; i++) {
     $("#channel").append(new Option(buttlyzer.channel_list[i], buttlyzer.channel_list[i]));
   }

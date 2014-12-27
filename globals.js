@@ -1,8 +1,27 @@
 // size of log files
-buttlyzer.logs_size = 42203913;
+buttlyzer.logs_size = 30777751;
 
+// total bytes loaded for each log file
 buttlyzer.loaded_messages = 0;
 buttlyzer.loaded_tokens = 0;
+
+buttlyzer.channel_list = ["all channels",
+                          "#buttbottrivia",
+                          "#internbotdebug",
+                          "#internbotdebug2",
+                          "#internhearts",
+                          "#interns",
+                          "#internsbotdebug2",
+                          "#runescape"];
+
+buttlyzer.channel_map = {"all channels": 0,
+                         "#buttbottrivia": 1,
+                         "#internbotdebug": 2,
+                         "#internbotdebug2": 3,
+                         "#internhearts": 4,
+                         "#interns": 5,
+                         "#internsbotdebug2": 6,
+                         "#runescape": 7};
 
 // the current data set, including [{d: timestamp, f: from, t: to}]
 buttlyzer.data = null;
@@ -21,9 +40,6 @@ buttlyzer.total_messages = 0;
 
 // user list to sort and display
 buttlyzer.user_list = [];
-
-// channel list to sort and display
-buttlyzer.channel_list = [];
 
 // options for initial pie chart:
 // {type: "pie", name: "Messages", data: initial pie chart data}

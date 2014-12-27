@@ -7,7 +7,7 @@ buttlyzer.count_messages = function(c) {
   buttlyzer.user_list = [];
   for (var i = 0; i < buttlyzer.data.length; i++) {
     var f = buttlyzer.data[i].f;
-    if (c !== "all channels" && buttlyzer.data[i].t !== c) {
+    if (c !== 0 && buttlyzer.data[i].t !== c) {
       continue;
     }
     if (buttlyzer.user_num.hasOwnProperty(f)) {
