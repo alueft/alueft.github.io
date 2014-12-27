@@ -49,6 +49,6 @@ $.ajax({
     $("#chart").fadeTo(1000,1);
     $("#credits").fadeTo(1000,1);
     $("#options").fadeTo(1000,1);
-    $("#block").remove();
+    $("#block").hide(1000);
   }
 });
