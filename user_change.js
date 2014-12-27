@@ -1,8 +1,8 @@
 // show line chart of messages by day (or the original pie chart)
 buttlyzer.redraw = function() {
-  var us = $("#user").val();
+  var us = buttlyzer.user_map[$("#user").val()];
   buttlyzer.hchart.destroy();
-  if (us === "all users") {
+  if (us === 0) {
     buttlyzer.hchart = new Highcharts.Chart(buttlyzer.pie_options);
     $("#chart").highcharts().addSeries(buttlyzer.init_options);
     buttlyzer.user_num_array_ind = 1;

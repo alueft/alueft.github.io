@@ -6,7 +6,7 @@ buttlyzer.count_messages = function(c) {
   buttlyzer.total_messages = 0;
   buttlyzer.user_list = [];
   for (var i = 0; i < buttlyzer.data.length; i++) {
-    var f = buttlyzer.data[i].f;
+    var f = buttlyzer.user_array[buttlyzer.data[i].f];
     if (c !== 0 && buttlyzer.data[i].t !== c) {
       continue;
     }
