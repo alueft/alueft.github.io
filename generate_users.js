@@ -5,6 +5,8 @@ buttlyzer.generate_users = function(threshold) {
     // generate new values and add to lists
     buttlyzer.other_msg = 0;
     buttlyzer.user_num_array = [];
+    var other_size = 0;
+    var other_last = "";
     for (var user in buttlyzer.user_num) {
       if (buttlyzer.user_num.hasOwnProperty(user) && !buttlyzer.graphed_users.hasOwnProperty(user)) {
         if (buttlyzer.user_num[user] / threshold > 0.02) {
@@ -13,8 +15,17 @@ buttlyzer.generate_users = function(threshold) {
         }
         else {
           buttlyzer.other_msg += buttlyzer.user_num[user];
+          other_size++;
+          other_last = user;
         }
       }
+    }
+
+    // if there is only one user in the "Other" group, graph the user normally
+    if (other_size === 1) {
+      buttlyzer.user_num_array.push({name: other_last, y: buttlyzer.other_msg, drilldown: true});
+      buttlyzer.graphed_users[other_last] = buttlyzer.other_msg;
+      buttlyzer.other_msg = 0;
     }
 
     // sort by decreasing number of messages and add "Other" at the end

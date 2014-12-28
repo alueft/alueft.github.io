@@ -42,7 +42,6 @@ $.when(
     },
     success: function(response) {
       buttlyzer.token_list = response;
-      console.log("token list done");
     }
   })
 ).then(function() {
