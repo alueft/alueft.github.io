@@ -71,10 +71,9 @@ $.when(
   $("#chart").highcharts().addSeries(buttlyzer.init_options);
   
   // fade in/out
-  $("#loading").fadeTo(1000,0);
-  $("#block").fadeTo(1000,0);
+  $("#loading").fadeOut(1000);
+  $("#block").fadeOut(1000);
   $("#chart").fadeTo(1000,1);
   $("#credits").fadeTo(1000,1);
   $("#options").fadeTo(1000,1);
-  $("#block").hide(1000);
 });
