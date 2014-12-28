@@ -55,6 +55,7 @@ $.when(
     return a.localeCompare(b);
   });
   $("#user").append(new Option("all users", "all users"));
+  $("#user").append(new Option("all users over all time", "all users over all time"));
   for (var i = 0; i < buttlyzer.user_list.length; i++) {
     $("#user").append(new Option(buttlyzer.user_list[i], buttlyzer.user_list[i]));
   }

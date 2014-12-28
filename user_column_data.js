@@ -9,7 +9,7 @@ buttlyzer.user_column_data = function(u) {
   var c = buttlyzer.channel_map[$("#channel").val()];
   // group data by intervals of g
   for (var i = 0; i < buttlyzer.data.length; i++) {
-    if (buttlyzer.data[i].f !== u) {
+    if (u !== -1 && buttlyzer.data[i].f !== u) {
       continue;
     }
     if (c !== 0 && buttlyzer.data[i].t !== c) {

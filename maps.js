@@ -92,7 +92,8 @@ buttlyzer.user_array = ["all users",
                         "volkman",
                         "xiao"];
 
-buttlyzer.user_map = {"all users": 0,
+buttlyzer.user_map = {"all users over all time": -1,
+                      "all users": 0,
                       "_": 1,
                       "____________": 2,
                       "_____________": 3,

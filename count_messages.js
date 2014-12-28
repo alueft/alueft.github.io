@@ -3,8 +3,8 @@
 // c: channel name, or "all channels"
 buttlyzer.count_messages = function(c) {
   buttlyzer.user_num = {};
-  buttlyzer.total_messages = 0;
   buttlyzer.user_list = [];
+  buttlyzer.total_messages = 0;
   for (var i = 0; i < buttlyzer.data.length; i++) {
     var f = buttlyzer.user_array[buttlyzer.data[i].f];
     if (c !== 0 && buttlyzer.data[i].t !== c) {
