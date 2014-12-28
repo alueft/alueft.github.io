@@ -27,6 +27,18 @@ html, body, #wrap, #block {
 #kmatch {
   display: none;
 }
+#infolink {
+  color: blue;
+  text-decoration: underline;
+  cursor: default;
+}
+#info {
+  display: none;
+  margin: auto;
+  position: absolute;
+  background-color: white;
+  text-align: left;
+}
 .ui-autocomplete {
   text-align: left;
   max-height: 90%;

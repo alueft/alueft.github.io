@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="cache-control" content="no-cache">
-<meta http-equiv="expires" content="0">
-<meta http-equiv="pragma" content="no-cache">
+<meta charset="UTF-8"/>
+<meta http-equiv="cache-control" content="no-cache"/>
+<meta http-equiv="expires" content="0"/>
+<meta http-equiv="pragma" content="no-cache"/>
 <title>the buttlyzer</title>
-<link rel="stylesheet" type="text/css" href="style.css" media="screen"></link>
-<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"></link>
+<link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css"/>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
 <script src="//code.highcharts.com/highcharts.js"></script>
@@ -19,8 +19,17 @@
 <div id="chart"></div>
 <div id="block"></div>
 <progress id="loading" max="100" value="0"></progress>
-<div id="options"><select id="show"><option value="tm" selected>messages sent</option><option value="tk">tokens sent</option></select><span id="kmatch"> matching text <input id="kinput"></input> </span> by <select id="user"></select> in <select id="channel"></select><span id="esc"></span></div>
-<div id="credits">buttlyzer 0.1.1 on <a href="http://www.highcharts.com/">highcharts</a></div>
+<div id="options"><select id="show"><option value="tm" selected>messages sent</option><option value="tk">tokens sent</option></select><span id="kmatch"> matching text <input id="kinput"/> </span> by <select id="user"></select> in <select id="channel"></select><span id="esc"></span></div>
+<div id="credits">buttlyzer 0.1.1 on <a href="http://www.highcharts.com/">highcharts</a> <span id="infolink">(what is this?)</span></div>
+<div id="info">
+the data itself is the product of numerous (former) amazon interns' boredom and lack of productivity.
+<br/>
+<br/>
+this webpage is the product of one specific (former) amazon intern's boredom (although he is quite certain that he's been rather productive on this).
+<br/>
+<br/>
+if/when you break something, yell at him at [the user that's sent the most messages in all channels] at gmail.com.
+</div>
 </div>
 
 <script src="buttlyzer.js"></script>
@@ -37,5 +46,6 @@
 <script src="show_change.js"></script>
 <script src="esc_press.js"></script>
 <script src="tokens.js"></script>
+<script src="info.js"></script>
 </body>
 </html>
