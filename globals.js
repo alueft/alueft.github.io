@@ -1,9 +1,10 @@
 // size of log files
-buttlyzer.logs_size = 21810847;
+buttlyzer.logs_size = 22345300;
 
 // total bytes loaded for each log file
 buttlyzer.loaded_messages = 0;
 buttlyzer.loaded_tokens = 0;
+buttlyzer.loaded_token_list = 0;
 
 // the current data set, including [{d: timestamp, f: from, t: to}]
 buttlyzer.data = null;

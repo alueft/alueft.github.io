@@ -1,4 +1,4 @@
-// make simultaneous requests to get tokens and messages
+// make simultaneous requests to get JSON-encoded data
 $.when(
   // get tokens
   $.ajax({
@@ -7,7 +7,7 @@ $.when(
     xhrFields: {
       onprogress: function(e) {
         buttlyzer.loaded_tokens = e.loaded;
-        $("#loading").val((e.loaded + buttlyzer.loaded_messages) / buttlyzer.logs_size * 100);
+        $("#loading").val((e.loaded + buttlyzer.loaded_messages + buttlyzer.loaded_token_list) / buttlyzer.logs_size * 100);
       }
     },
     success: function(response) {
@@ -22,11 +22,27 @@ $.when(
     xhrFields: {
       onprogress: function(e) {
         buttlyzer.loaded_messages = e.loaded;
-        $("#loading").val((e.loaded + buttlyzer.loaded_tokens) / buttlyzer.logs_size * 100);
+        $("#loading").val((e.loaded + buttlyzer.loaded_tokens + buttlyzer.loaded_token_list) / buttlyzer.logs_size * 100);
       }
     },
     success: function(response) {
       buttlyzer.data = buttlyzer.message_data = response;
+    }
+  }),
+
+  // get token list
+  $.ajax({
+    url: "/token_list.json",
+    dataType: "json",
+    xhrFields: {
+      onprogress: function(e) {
+        buttlyzer.loaded_token_list = e.loaded;
+        $("#loading").val((e.loaded + buttlyzer.loaded_messages + buttlyzer.loaded_tokens) / buttlyzer.logs_size * 100);
+      }
+    },
+    success: function(response) {
+      buttlyzer.token_list = response;
+      console.log("token list done");
     }
   })
 ).then(function() {
