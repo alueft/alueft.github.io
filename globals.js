@@ -1,5 +1,5 @@
 // size of log files
-buttlyzer.logs_size = 22345300;
+buttlyzer.logs_size = 9490609;
 
 // total bytes loaded for each log file
 buttlyzer.loaded_messages = 0;
@@ -9,11 +9,11 @@ buttlyzer.loaded_token_list = 0;
 // the current data set, including [{d: timestamp, f: from, t: to}]
 buttlyzer.data = null;
 
-// data loaded from message logs: [{d: timestamp, f: from, t: to}]
-buttlyzer.message_data = null;
+// message data: [{d: timestamp, f: from, t: to}]
+buttlyzer.message_data = [];
 
-// data loaded from token logs: {token name: [{d: timestamp, f: from, t: to}]}
-buttlyzer.token_data = null;
+// token data: {token name: [{d: timestamp, f: from, t: to}]}
+buttlyzer.token_data = {};
 
 // user => # messages sent
 buttlyzer.user_num = {};
@@ -23,6 +23,9 @@ buttlyzer.total_messages = 0;
 
 // user list to sort and display
 buttlyzer.user_list = [];
+
+// token list to display when searching for tokens
+buttlyzer.token_list = [];
 
 // options for initial pie chart:
 // {type: "pie", name: "Messages", data: initial pie chart data}

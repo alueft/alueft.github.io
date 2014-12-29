@@ -9,7 +9,7 @@ html, body, #wrap, #block {
 #chart, #credits {
   opacity: 0;
   position: absolute;
-  font-size: 70%;
+  font-size: 80%;
   bottom: 0;
 }
 #block, #loading {
