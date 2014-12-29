@@ -49,3 +49,9 @@ html, body, #wrap, #block {
 .ui-menu-item {
   list-style-image: none !important;
 }
+.ui-widget {
+  font-family: initial !important;
+}
+.ui-widget-content {
+  background-image: none !important;
+}
