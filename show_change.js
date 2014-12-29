@@ -1,10 +1,12 @@
 $("#show").change(function() {
   if ($("#show").val() === "tm") {
     $("#kmatch").hide();
-    buttlyzer.data = buttlyzer.message_data;
-    buttlyzer.reset();
+    if (buttlyzer.data !== buttlyzer.message_data) {
+      buttlyzer.data = buttlyzer.message_data;
+      buttlyzer.reset();
+    }
   }
-  else {
+  else if ($("#show").val() === "tk") {
     $("#kmatch").show();
   }
 });
