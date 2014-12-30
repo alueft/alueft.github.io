@@ -31,7 +31,13 @@ $.ajax({
 
     // sort token list
     buttlyzer.token_list.sort(function(a, b) {
-      return a.localeCompare(b);
+      if (a > b) {
+        return 1;
+      }
+      if (a < b) {
+        return -1;
+      }
+      return 0;
     });
 
     // at this point everything has been generated
