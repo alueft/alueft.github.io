@@ -15,6 +15,9 @@ buttlyzer.message_data = [];
 // token data: {token name: [{d: timestamp, f: from, t: to}]}
 buttlyzer.token_data = {};
 
+// token by user data: {"user|all users": [{d: timestamp, f: token, t: to}]}
+buttlyzer.token_user_data = {};
+
 // user => # messages sent
 buttlyzer.user_num = {};
 

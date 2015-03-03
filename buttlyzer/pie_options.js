@@ -12,7 +12,13 @@ buttlyzer.pie_options = {
         }
         else {
           // create new column chart
-          var d = buttlyzer.user_column_data(buttlyzer.user_map[name]);
+          var d = null;
+          if ($("#show").val() === "tu") {
+            d = buttlyzer.user_column_data(name);
+          }
+          else {
+            d = buttlyzer.user_column_data(buttlyzer.user_map[name]);
+          }
           buttlyzer.hchart.destroy();
           buttlyzer.hchart = new Highcharts.Chart(buttlyzer.column_options);
           $("#chart").highcharts().addSeries({type: "column", name: "Messages", data: d, showInLegend: false});

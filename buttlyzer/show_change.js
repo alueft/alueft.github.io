@@ -9,4 +9,11 @@ $("#show").change(function() {
   else if ($("#show").val() === "tk") {
     $("#kmatch").show();
   }
+  else if ($("#show").val() === "tu") {
+    $("#kmatch").hide();
+    if (buttlyzer.data !== buttlyzer.token_user_data["all users"]) {
+      buttlyzer.data = buttlyzer.token_user_data["all users"];
+      buttlyzer.reset();
+    }
+  }
 });

@@ -1,5 +1,5 @@
 $.ajax({
-  url: "/data.json",
+  url: "data.json",
   dataType: "json",
   xhrFields: {
     onprogress: function(e) {
@@ -10,7 +10,8 @@ $.ajax({
     console.time("timer"); //temp
     // response is in the form:
     // [{"d": timestamp, "f": from, "t": to, "k": [tokens]}]
-    // populate message_data (= data), token_list, and token_data
+    // populate message_data (= data), token_list, token_data, and token_user_data
+    var au = [];
     for (var i = 0; i < response.length; i++) {
       var o = response[i];
       var k = o.k;
@@ -25,9 +26,18 @@ $.ajax({
           buttlyzer.token_data[n] = [po];
           buttlyzer.token_list.push(n);
         }
+        var po2 = {"d":o.d,"f":n,"t":o.t};
+        au.push(po2);
+        if (buttlyzer.token_user_data.hasOwnProperty(o.f)) {
+          buttlyzer.token_user_data[o.f].push(po2);
+        }
+        else {
+          buttlyzer.token_user_data[o.f] = [po2];
+        }
       }
     }
     buttlyzer.data = buttlyzer.message_data;
+    buttlyzer.token_user_data["all users"] = au;
 
     // sort token list
     buttlyzer.token_list.sort(function(a, b) {
