@@ -117,6 +117,12 @@ $("body").keydown(function(e) {
       $("#lyric").text(hist[histind]);
     }
   }
+  else if (e.keyCode == 70) {
+    if (histind >= 0 && histind+1 < hist.length) {
+      histind++;
+      $("#lyric").text(hist[histind]);
+    }
+  }
 });
 
 $("body").click(function() {
