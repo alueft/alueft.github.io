@@ -1,0 +1,15 @@
+html, body {
+  overflow: hidden;
+  text-align: center;
+  height: 100%;
+}
+#pre {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#lyric {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
