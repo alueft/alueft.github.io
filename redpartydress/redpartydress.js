@@ -133,7 +133,7 @@ $("body").keydown(function(e) {
   }
 });
 
-$("body").click(function() {
+$("#lyric").click(function() {
   var node = document.getElementById("lyric");
   if (document.selection) {
     var range = document.body.createTextRange();
