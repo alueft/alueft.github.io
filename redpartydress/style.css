@@ -8,9 +8,12 @@ html, body {
   display: inline-block;
   vertical-align: middle;
 }
-#lyric {
+#lyrics {
   display: inline-block;
   vertical-align: middle;
   position: relative;
   font-size: x-large;
+}
+#gen, #back, #forward {
+  font-size: medium;
 }

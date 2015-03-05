@@ -107,21 +107,29 @@ $.getJSON("data.json", function(response) {
   }
 });
 
+var histb = function() {
+  if (histind > 0) {
+    histind--;
+    $("#lyric").text(hist[histind]);
+  }
+};
+
+var histf = function() {
+  if (histind >= 0 && histind+1 < hist.length) {
+    histind++;
+    $("#lyric").text(hist[histind]);
+  }
+};
+
 $("body").keydown(function(e) {
   if (e.keyCode == 13) {
     gen();
   }
-  else if (e.keyCode == 66) {
-    if (histind > 0) {
-      histind--;
-      $("#lyric").text(hist[histind]);
-    }
+  else if (e.keyCode === 66) {
+    histb();
   }
-  else if (e.keyCode == 70) {
-    if (histind >= 0 && histind+1 < hist.length) {
-      histind++;
-      $("#lyric").text(hist[histind]);
-    }
+  else if (e.keyCode === 70) {
+    histf();
   }
 });
 
