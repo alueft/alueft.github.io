@@ -29,21 +29,6 @@ var get_next = function(idx) {
   return -1;
 };
 
-var isalnum = function(c) {
-  return (c > 47 && c < 58) || (c > 64 && c < 91) || (c > 96 && c < 123);
-};
-
-var strip = function(word) {
-  var i1 = 0, i2 = word.length-1;
-  while (!isalnum(word.charCodeAt(i1)))
-    i1++;
-  while (!isalnum(word.charCodeAt(i2)))
-    i2--;
-  if (i1 > i2)
-    return "";
-  return word.substr(i1,i2-i1+1);
-};
-
 var kmp_init = function(p, fail) {
   for (var i = 0, j = -1, m = p.length; ; i++, j++) {
     fail[i] = j; if (i === m) return;
@@ -105,6 +90,7 @@ $.getJSON("data.json", function(response) {
       int2str[str2int[prop]] = prop;
     }
   }
+  gen();
 });
 
 var histb = function() {
