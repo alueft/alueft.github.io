@@ -6,6 +6,7 @@ var all = "";
 var trans = {};
 var hist = [];
 var histind = -1;
+var wrap = 80;
 
 var get_next = function(idx) {
   var totval = 0;
@@ -68,7 +69,21 @@ var gen = function() {
     }
     while (word !== "~");
     if (!kmp_match(all,out)) {
-      $("#lyric").text(out);
+      var out2 = out;
+      out = "";
+      var ind = 0, ind2 = 0;
+      while (ind < out2.length) {
+        while (ind2 < out2.length && (ind2-ind < wrap || out2[ind2] !== ' ')) {
+          ind2++;
+        }
+        if (out !== "") {
+          out += "<br>";
+        }
+        out += out2.substr(ind,ind2-ind);
+        ind = ind2+1;
+        ind2 += 2;
+      }
+      $("#lyric").html(out);
       histind++;
       if (histind === hist.length) {
         hist.push(out);
@@ -96,14 +111,14 @@ $.getJSON("data.json", function(response) {
 var histb = function() {
   if (histind > 0) {
     histind--;
-    $("#lyric").text(hist[histind]);
+    $("#lyric").html(hist[histind]);
   }
 };
 
 var histf = function() {
   if (histind >= 0 && histind+1 < hist.length) {
     histind++;
-    $("#lyric").text(hist[histind]);
+    $("#lyric").html(hist[histind]);
   }
 };
 
