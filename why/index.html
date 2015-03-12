@@ -8,6 +8,8 @@
 </head>
 <body>
 <canvas id="e" width="404" height="404"></canvas>
+<br>
+<div style="width:404px;"><center><a id="dl" href="#">download</a></center></div>
 <script>
   Date.prototype.stdTimezoneOffset = function() {
     var jan = new Date(this.getFullYear(), 0, 1);
@@ -32,6 +34,16 @@
   context.fillStyle = "red";
   context.textAlign = "center";
   context.fillText(days.toString(), 315, 149);
+
+  function dlCanvas() {
+    var dt = canvas.toDataURL('image/png');
+    dt = dt.replace(/^data:image\/[^;]*/, 'data:application/octet-stream');
+    dt = dt.replace(/^data:application\/octet-stream/, 'data:application/octet-stream;headers=Content-Disposition%3A%20attachment%3B%20filename='+days.toString()+'.png');
+    this.href = dt;
+  };
+  var dl = document.getElementById("dl");
+  dl.addEventListener('click', dlCanvas, false);
+  dl["download"] = days.toString()+".png";
 </script>
 </body>
 </html>
