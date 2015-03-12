@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>why</title>
+<style>
+* { margin: 0; padding: 0; }
+</style>
+</head>
+<body>
+<canvas id="e" width="404" height="404"></canvas>
+<script>
+  Date.prototype.stdTimezoneOffset = function() {
+    var jan = new Date(this.getFullYear(), 0, 1);
+    var jul = new Date(this.getFullYear(), 6, 1);
+    return Math.max(jan.getTimezoneOffset(), jul.getTimezoneOffset());
+  }
+  Date.prototype.dst = function() {
+    return this.getTimezoneOffset() < this.stdTimezoneOffset();
+  }
+
+  var leave = new Date(2014, 9, 5, 1, 12, 26);
+  var now = new Date();
+  if (!now.dst()) now.setHours(now.getHours()-1);
+  var days = Math.floor((now.getTime()-leave.getTime())/(1000*24*60*60));
+
+  var canvas = document.getElementById("e");
+  var context = canvas.getContext("2d");
+  context.font = "bold 40px Comic Sans MS";
+  context.fillText("it has been", 22, 149);
+  context.fillText("days since junghoo", 22, 203);
+  context.fillText("last left this chat", 22, 257);
+  context.fillStyle = "red";
+  context.textAlign = "center";
+  context.fillText(days.toString(), 315, 149);
+</script>
+</body>
+</html>
