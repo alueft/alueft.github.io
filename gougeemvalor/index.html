@@ -7,11 +7,10 @@
 <body>
 <div style="text-align:center;">
 <img src="gougeemvalor.jpg" onclick="p();"/>
-<br>
-click to gouge
+<p id="p">click to gouge</p>
 <div id="a">
   <audio id="s" preload="auto" autobuffer>
-	  <source src="gougeemvalor.ogg" type="audio/ogg"/>
+	  <source src="gougeemvalor.mp3" type="audio/mp3"/>
   </audio>
 </div>
 </div>
@@ -25,6 +24,7 @@ function p(){
 	i++;
 	if (elem) {
 		elem.play();
+    $("#p").text("GOUGE EM VALOR");
 	}
 }
 </script>
