@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>GOUGE EM VALOR</title>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+<body>
+<div style="text-align:center;">
+<img src="gougeemvalor.jpg" onclick="p();"/>
+<br>
+click to gouge
+<div id="a">
+  <audio id="s" preload="auto" autobuffer>
+	  <source src="gougeemvalor.ogg" type="audio/ogg"/>
+  </audio>
+</div>
+</div>
+</body>
+<script>
+var i = 0;
+function p(){
+	$("#s").clone().attr('id','a_'+i).appendTo('#a');
+	var elem = document.getElementById('a_'+i);
+	setTimeout("$('#a_"+i+"').remove();",4200);
+	i++;
+	if (elem) {
+		elem.play();
+	}
+}
+</script>
+</html>
