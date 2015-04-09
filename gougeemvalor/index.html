@@ -18,14 +18,14 @@
 <script>
 var i = 0;
 function p(){
-	$("#s").clone().attr('id','a_'+i).appendTo('#a');
-	var elem = document.getElementById('a_'+i);
-	setTimeout("$('#a_"+i+"').remove();",4200);
-	i++;
-	if (elem) {
-		elem.play();
+  $("#s").clone().attr('id','a_'+i).appendTo('#a');
+  var elem = document.getElementById('a_'+i);
+  setTimeout("$('#a_"+i+"').remove();",4200);
+  i++;
+  if (elem) {
+    elem.play();
     $("#p").text("GOUGE EM VALOR");
-	}
+  }
 }
 </script>
 </html>
