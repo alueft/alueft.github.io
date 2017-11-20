@@ -1,0 +1,21 @@
+html, body {
+  overflow: hidden;
+  text-align: center;
+  height: 100%;
+  background-color: black;
+  color: white;
+}
+#pre {
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+#lyrics {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-size: x-large;
+}
+#gen, #back, #forward {
+  font-size: medium;
+}
