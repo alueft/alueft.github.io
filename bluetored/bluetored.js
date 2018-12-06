@@ -117,14 +117,14 @@ xmlhttp.send();
 var histb = function() {
   if (histind > 0) {
     histind--;
-    document.getElementById("lyric").html(hist[histind]);
+    document.getElementById("lyric").innerHTML = hist[histind];
   }
 };
 
 var histf = function() {
   if (histind >= 0 && histind+1 < hist.length) {
     histind++;
-    document.getElementById("lyric").html(hist[histind]);
+    document.getElementById("lyric").innerHTML = hist[histind];
   }
 };
 
