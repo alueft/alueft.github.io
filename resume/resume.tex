@@ -1,0 +1,202 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Trey Hunner (http://www.treyhunner.com/)
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.5in,top=0.5in,right=0.5in,bottom=0.5in]{geometry} % Document margins
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{garamondx}
+\usepackage[super]{nth}
+
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = *}
+\name{Angus Lim} % Your name
+\address{48 9th Ave., Apt. 23A \\ New York, NY 10011} % Your address
+%\address{576 W 19th Ave \\ Vancouver, BC V5Z 1W6} % Your address
+\address{(206) 201-9908 \\ anguslim94@gmail.com} % Your phone number and email
+%\address{(604) 872-7118 \\ anguslim94@gmail.com} % Your phone number and email
+
+\begin{document}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Work Experience}
+
+\begin{rSubsection}{Google, Inc.}{06/2016 - 07/2017}{Software Engineer}{New York, NY, USA}
+\item Maintained Cloud Pub/Sub, a distributed message delivery service supporting customers such as Snapchat and Spotify.
+\item Designed, implemented, and rolled out features for internal components of Cloud Pub/Sub, including internal key-value stores, message storage binaries, and database adminstration tools.
+\end{rSubsection}
+
+\begin{rSubsection}{Google, Inc.}{08/2015 - 11/2015}{Software Engineer}{Mountain View, CA, USA}
+\item Built a client of a Google-internal logger, exposing a simple API to first-party Android apps for simple logging of lifecycle events.
+\item Integrated the client's logs into various monitors for tracking and displaying data.
+\end{rSubsection}
+
+\begin{rSubsection}{Amazon Global Resources}{09/2014 - 12/2014}{Software Development Engineer}{Seattle, WA, USA}
+\item Created a Java server application to store and supply desired return values for given method signatures via HTTP.
+\item Utilized AOP to enable user-defined replacement of code execution with requests to the server to retrieve data.
+\end{rSubsection}
+
+\begin{rSubsection}{Boston Pizza International}{06/2014 - 08/2014}{Learning and Technology Developer}{Richmond, BC, Canada}
+\item Rewrote backend code to make use of a new MVC architecture in an upgrade of a web content management system.
+\item Deployed and provided maintenance for the system upgrade on an employee training content website serving over 50000 users.
+\item Optimized MySQL tables by writing and executing PHP scripts to convert XML-encoded content entries to JSON.
+\end{rSubsection}
+
+\begin{rSubsection}{JDS Uniphase Corporation}{05/2012 - 12/2012}{Digital Signal Processor (DSP) Engineer}{Vancouver, BC, Canada}
+\item Designed and implemented an interface for direct communication between DSPs in an embedded system.
+\item Wrote and debugged code for compiling statistics during operation of the system.
+%\item Replaced arrays of buffer pools with FIFO queues, reducing internal memory usage by 22\% and external memory usage by 66\%.
+\item Facilitated build server upgrades by rewriting Makefiles and code generation scripts to be compatible with new software.
+\end{rSubsection}
+
+%\begin{rSubsection}{Icron Technologies}{01/2011 - 04/2011}{Software Design Engineer}{Burnaby, BC, Canada}
+%%\item Developed a Python program to communicate with proprietary hardware for testing and debugging via sockets.
+%%\item Utilized the .NET Framework to create a graphical interface for the program.
+%\item Developed a graphical Python program to communicate with proprietary hardware for testing and debugging via sockets.
+%\item Debugged firmware and test code for hardware, using C.
+%\end{rSubsection}
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Technical Skills}
+\begin{list}{}{\leftmargin=0em} % \cdot used for bullets, no indentation
+\itemsep -0.5em % Compress items in list together for aesthetics
+\item Distributed systems programming: C/C++, Python, Java
+\item Unix-like (GNU/Linux, FreeBSD) operating systems and software; LAMP stack
+\item Git, SVN, MATLAB/GNU Octave, LaTeX
+\end{list}
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Education}
+
+\begin{list}{}{\leftmargin=0em} % \cdot used for bullets, no indentation
+\itemsep -0.5em % Compress items in list together for aesthetics
+\item {\bf University of British Columbia} \hfill 09/2009 - 05/2016
+\item B.A.Sc. in Engineering Physics, Electrical Engineering stream
+\end{list}
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Research Experience}
+
+\begin{rSubsection}{STEMCELL Technologies}{09/2013 - 12/2013}{}{}
+\item Implemented Wiener deconvolution and an iterative correction algorithm for motion deblurring of a group of images.
+\item Designed a GUI with the Qt framework to apply motion deblurring to a set of microscopic images of cells.
+\end{rSubsection}
+
+\begin{rSubsection}{University of British Columbia}{01/2013 - 04/2013}{Physics \& Astronomy Department}{}
+\item Implemented low-pass filters on a 32-bit microcontroller as part of a project to design a low-cost lock-in amplifier.
+\item Created a GUI with PyGTK to communicate with the microcontroller via a socket and display amplitude and phase shift.
+\end{rSubsection}
+
+\begin{rSubsection}{University of British Columbia}{05/2011 - 08/2011}{Physics \& Astronomy Department}{}
+\item Designed and built an autonomous robot to climb a slatted incline and a wall with a pattern of small holes.
+\item Assembled and soldered H-bridge and PID controller circuits for DC motor control.
+\item Wrote the software for the robot, including a state-based control system.
+\end{rSubsection}
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	EXTRACURRICULAR SECTION
+%----------------------------------------------------------------------------------------
+
+\begin{rSection}{Extracurricular}
+
+\begin{rSubsection}{ACM Pacific Northwest Regional Programming Contest}{09/2011 - 11/2015}{}{}
+\item Designed, implemented, and debugged algorithms to solve given problems, while coordinating a team of three on one computer.
+\item \nth{9} place (2015); \nth{11} place (2014); Canada Site Winner, \nth{4} place (2013); \nth{14} place (2012); \nth{28} place (2011)
+%\item \nth{9} of 70 teams (2015); \nth{11} of 93 teams (2014); Canada Site Winner, \nth{4} of 117 teams (2013); \nth{14} of 111 teams (2012); \nth{28} of 94 teams (2011)
+\end{rSubsection}
+
+\begin{rSubsection}{Google Code Jam}{04/2012 - Present}{}{}
+\item Designed, implemented, and debugged algorithms to solve given problems in online individual contests.
+\item Top 1000 of over 25000 participants, Round 2 (2014)
+\end{rSubsection}
+
+
+
+%{\bf ACM Pacific Northwest Regional Programming Contest}
+%\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+%\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+%\item 2014/11 - \nth{11} of 93 teams
+%\item 2013/11 - \nth{4} of 117 teams
+%\item 2012/11 - \nth{14} of 111 teams
+%\item 2011/11 - \nth{28} of 94 teams
+%\end{list}
+%{\bf Google Code Jam}
+%\begin{list}{$\cdot$}{\leftmargin=0em} % \cdot used for bullets, no indentation
+%\itemsep -0.5em \vspace{-0.5em} % Compress items in list together for aesthetics
+%\item 2014/05 - Top 1000, Round 2
+%\end{list}
+
+
+\end{rSection}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	EXAMPLE SECTION
+%----------------------------------------------------------------------------------------
+
+%\begin{rSection}{Section Name}
+
+%Section content\ldots
+
+%\end{rSection}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
