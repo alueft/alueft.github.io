@@ -1,0 +1,190 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <script src="https://unpkg.com/nouislider@15.7.1/dist/nouislider.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/nouislider@15.7.1/dist/nouislider.min.css" />
+    <style>
+      html, body {
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+      #slider {
+        top: 10px;
+        width: 30%;
+        margin: auto;
+      }
+      #bottom {
+        position: absolute;
+        height: 90%;
+        width: 100%;
+        bottom: 0;
+      }
+      #dates {
+        margin: auto;
+        text-align: center;
+        position: relative;
+      }
+      #map {
+        height: 94%;
+        width: 100%;
+        display: block;
+        margin: auto;
+        bottom: 0;
+        position: absolute;
+      }
+      /* wider on mobile */
+      @media all and (max-width: 640px) {
+        #slider {
+          width: 75%;
+        }
+        #map {
+          height: 90%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slider"></div>
+    <div id="bottom">
+      <div id="dates">
+        displaying shows between <span id="start">2023-1-1</span> and <span id="end">2023-12-31</span>
+        (including <input type="checkbox" id="vancouver" name="vancouver" checked /><label for="vancouver"> Vancouver</label>, 
+        <input type="checkbox" id="chicago" name="chicago" checked /><label for="chicago"> Chicago</label>, and
+        <input type="checkbox" id="nyc" name="nyc" checked /><label for="nyc"> NYC</label>)
+      </div>
+      <div id="map"></div>
+    </div>
+    <script>
+      (async function() {
+        function ymd_date(ts) {
+          var date = new Date(ts);
+          return date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+        }
+
+        var slider = document.getElementById('slider');
+
+        noUiSlider.create(slider, {
+          connect: true,
+          behaviour: 'drag',
+          range: {
+            'min': new Date(2023,0).getTime(),
+            'max': new Date(2023,11,31).getTime()
+          },
+          step: 7 * 24 * 60 * 60 * 1000,  // 1 week
+          start: [new Date(2023,0,1).getTime(),new Date(2023,11,31).getTime()],
+          pips: {
+            mode: 'range',
+            density: 100/11,
+            format: {
+              to: function (value) {
+                return ymd_date(value);
+              },
+              from: function (value) {
+                return Number(new Date(value));
+              }
+            }
+          },
+        });
+
+        const dataResp = await fetch('https://alueft.github.io/shows/data.json');
+        const data = await dataResp.json();
+
+        var markers;
+
+        var map = L.map('map');//.setView({lon: 45, lat: 45}, 2);
+
+        function updateMarkers() {
+          if (markers) {
+            var values = slider.noUiSlider.get();
+            var start = parseInt(values[0]), end = parseInt(values[1]);
+            markers.clearLayers();
+            var markersToAdd = [];
+            data.shows.forEach((show) => {
+              if (!document.getElementById(show.metro.toLowerCase()).checked) {
+                return;
+              }
+              var date = new Date(show.year, show.month-1, show.day).getTime();
+              var date_end;
+              if (show.year_end) {
+                date_end = new Date(show.year_end, show.month_end-1, show.day_end+1).getTime();
+              }
+              if (start <= date && date <= end || (date_end && start <= date_end && date_end <= end)) {
+                markersToAdd.push(L.marker(data.locations[show.location]).bindPopup(show.artist));
+              }
+            });
+            markers.addLayers(markersToAdd);
+            map.fitBounds(markers.getBounds());
+          }
+        }
+
+        ['vancouver', 'chicago', 'nyc'].forEach((metro) => {
+          document.getElementById(metro).addEventListener('click', () => {
+            updateMarkers();
+          });
+        });
+
+        slider.noUiSlider.on('update', function (values, handle) {
+          var start = parseInt(values[0]), end = parseInt(values[1]);
+          document.getElementById('start').innerHTML = ymd_date(start);
+          document.getElementById('end').innerHTML = ymd_date(end);
+          updateMarkers();
+        });
+    
+        // add the OpenStreetMap tiles
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>'
+        }).addTo(map);
+
+        // show the scale bar on the lower left corner
+        L.control.scale({imperial: true, metric: true}).addTo(map);
+
+        async function getNode(id) {
+          const resp = await fetch('https://overpass-api.de/api/interpreter', {method: 'POST', body: `data=[out:json]; node(${id}); out;`});
+          const data = await resp.json();
+          return {lat: data.elements[0].lat, lon: data.elements[0].lon};
+        };
+
+        async function getWay(id) {
+          const resp = await fetch('https://overpass-api.de/api/interpreter', {method: 'POST', body: `data=[out:json]; way(${id}); out center;`});
+          const data = await resp.json();
+          console.log(data);
+          return {lat: data.elements[0].center.lat, lon: data.elements[0].center.lon};
+        };
+        
+        markers = L.markerClusterGroup({
+          singleMarkerMode: true,
+          iconCreateFunction: function (cluster) {
+            // identical to the default, other than changing the count thresholds (1/5/10 instead of 1/10/100)
+		    var childCount = cluster.getChildCount();
+
+		    var c = ' marker-cluster-';
+		    if (childCount < 5) {
+			    c += 'small';
+		    } else if (childCount < 10) {
+			    c += 'medium';
+		    } else {
+			    c += 'large';
+		    }
+
+		    return new L.DivIcon({ html: '<div><span>' + childCount + '</span></div>', className: 'marker-cluster' + c, iconSize: new L.Point(40, 40) });
+	      }
+        });
+
+        updateMarkers();
+
+        map.addLayer(markers);
+        map.attributionControl.setPrefix('<a href="https://leafletjs.com" title="A JavaScript library for interactive maps">Leaflet</a>');
+      })();
+    </script>
+  </body>
+</html>
