@@ -118,7 +118,11 @@
                 date_end = new Date(show.year_end, show.month_end-1, show.day_end+1).getTime();
               }
               if (start <= date && date <= end || (date_end && start <= date_end && date_end <= end)) {
-                markersToAdd.push(L.marker(data.locations[show.location]).bindPopup(show.artist));
+                var date_string = show.year + '-' + show.month + '-' + show.day;
+                if (show.year_end) {
+                  date_string += ' to ' + show.year_end + '-' + show.month_end + '-' + show.day_end;
+                }
+                markersToAdd.push(L.marker(data.locations[show.location]).bindPopup(show.artist + '<br>' + date_string + '<br>' + show.location));
               }
             });
             markers.addLayers(markersToAdd);
