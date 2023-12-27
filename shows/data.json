@@ -1,0 +1,723 @@
+{
+    "locations": {
+        "Baby's All Right": {
+            "lat": 40.7099599,
+            "lon": -73.9634234
+        },
+        "Barclays Center": {
+            "lat": 40.6825619,
+            "lon": -73.9753463
+        },
+        "The Bowery Ballroom": {
+            "lat": 40.7204368,
+            "lon": -73.9933366
+        },
+        "Brooklyn Made": {
+            "lat": 40.7071909,
+            "lon": -73.9219994
+        },
+        "The Brooklyn Monarch": {
+            "lat": 40.7109625,
+            "lon": -73.9362562
+        },
+        "Brooklyn Steel": {
+            "lat": 40.7193932,
+            "lon": -73.9387466
+        },
+        "The Cobalt": {
+            "lat": 49.2765005,
+            "lon": -123.1001
+        },
+        "Cobra Lounge": {
+            "lat": 41.8863874,
+            "lon": -87.6667991
+        },
+        "Elsewhere": {
+            "lat": 40.7095211,
+            "lon": -73.9232632
+        },
+        "Gramercy Theatre": {
+            "lat": 40.7399075,
+            "lon": -73.9849292
+        },
+        "Hart Bar": {
+            "lat": 40.6963535,
+            "lon": -73.9299985
+        },
+        "Irving Plaza": {
+            "lat": 40.7349099,
+            "lon": -73.9882699
+        },
+        "Knockdown Center": {
+            "lat": 40.7152788,
+            "lon": -73.9136706
+        },
+        "Le Poisson Rouge": {
+            "lat": 40.7284254,
+            "lon": -73.9998816
+        },
+        "Madison Square Garden": {
+            "lat": 40.7505185,
+            "lon": -73.9935059
+        },
+        "Market Hotel": {
+            "lat": 40.6969323,
+            "lon": -73.9345880
+        },
+        "The Meadows": {
+            "lat": 40.7107761,
+            "lon": -73.9366264
+        },
+        "Music Hall of Williamsburg": {
+            "lat": 40.7191523,
+            "lon": -73.9617836
+        },
+        "Pier 17": {
+            "lat": 40.705522,
+            "lon": -74.0015738
+        },
+        "Pier 36": {
+            "lat": 40.7096303,
+            "lon": -73.986274
+        },
+        "Pioneer Works": {
+            "lat": 40.6792002,
+            "lon": -74.0121266
+        },
+        "Public Records": {
+            "lat": 40.6821013,
+            "lon": -73.9865223
+        },
+        "Racket": {
+            "lat": 40.7430035,
+            "lon": -74.0058886
+        },
+        "Ridgewood Presbyterian Church": {
+            "lat": 40.7010379,
+            "lon": -73.8997744
+        },
+        "Rough Trade": {
+            "lat": 40.7595127,
+            "lon": -73.9804641
+        },
+        "Saint Vitus Bar": {
+            "lat": 40.7367784,
+            "lon": -73.9551724
+        },
+        "Skyport Marina": {
+            "lat": 40.7357746,
+            "lon": -73.9735864
+        },
+        "Sleeping Village": {
+            "lat": 41.9392866,
+            "lon": -87.7212467
+        },
+        "Tompkins Square Park": {
+            "lat": 40.7264724,
+            "lon": -73.9816871
+        },
+        "TV Eye": {
+            "lat": 40.6978683,
+            "lon": -73.9052427
+        },
+        "Union Park": {
+            "lat": 41.8838591,
+            "lon": -87.6651737
+        },
+        "Union Pool": {
+            "lat": 40.7150021,
+            "lon": -73.9516171
+        },
+        "Warsaw": {
+            "lat": 40.7223925,
+            "lon": -73.9484695
+        },
+        "Webster Hall": {
+            "lat": 40.7317687,
+            "lon": -73.9890904
+        },
+        "White Eagle Hall": {
+            "lat": 40.7250059,
+            "lon": -74.0515395
+        }
+    },
+    "shows": [
+        {
+            "artist": "Tomberlin",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 1,
+            "day": 13
+        },
+        {
+            "artist": "We Are Scientists",
+            "location": "Brooklyn Made",
+            "year": 2023,
+            "month": 1,
+            "day": 20
+        },
+        {
+            "artist": "Final Girls",
+            "location": "Saint Vitus Bar",
+            "year": 2023,
+            "month": 1,
+            "day": 24
+        },
+        {
+            "artist": "Abortion Access Benefit Series",
+            "location": "The Bowery Ballroom",
+            "year": 2023,
+            "month": 1,
+            "day": 28
+        },
+        {
+            "artist": "Dry Cleaning",
+            "location": "Pioneer Works",
+            "year": 2023,
+            "month": 2,
+            "day": 2
+        },
+        {
+            "artist": "Angel Olsen",
+            "location": "White Eagle Hall",
+            "year": 2023,
+            "month": 2,
+            "day": 6
+        },
+        {
+            "artist": "Viagra Boys",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 2,
+            "day": 17
+        },
+        {
+            "artist": "Screaming Females Garden Party",
+            "location": "White Eagle Hall",
+            "year": 2023,
+            "month": 2,
+            "day": 18
+        },
+        {
+            "artist": "Clown Core",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 2,
+            "day": 21
+        },
+        {
+            "artist": "Otoboke Beaver",
+            "location": "Le Poisson Rouge",
+            "year": 2023,
+            "month": 2,
+            "day": 22
+        },
+        {
+            "artist": "Knifeplay",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 2,
+            "day": 25
+        },
+        {
+            "artist": "Thick",
+            "location": "Racket",
+            "year": 2023,
+            "month": 3,
+            "day": 2
+        },
+        {
+            "artist": "Hide",
+            "location": "TV Eye",
+            "year": 2023,
+            "month": 3,
+            "day": 3
+        },
+        {
+            "artist": "Clan of Xymox",
+            "location": "The Brooklyn Monarch",
+            "year": 2023,
+            "month": 3,
+            "day": 10
+        },
+        {
+            "artist": "Show Me the Body",
+            "location": "Brooklyn Steel",
+            "year": 2023,
+            "month": 3,
+            "day": 24
+        },
+        {
+            "artist": "Scowl",
+            "location": "Rough Trade",
+            "year": 2023,
+            "month": 4,
+            "day": 6
+        },
+        {
+            "artist": "Emma Ruth Rundle",
+            "location": "Le Poisson Rouge",
+            "year": 2023,
+            "month": 4,
+            "day": 9
+        },
+        {
+            "artist": "Black Belt Eagle Scout",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 4,
+            "day": 15
+        },
+        {
+            "artist": "Gel",
+            "location": "Saint Vitus Bar",
+            "year": 2023,
+            "month": 4,
+            "day": 22
+        },
+        {
+            "artist": "Marissa Nadler",
+            "location": "Public Records",
+            "year": 2023,
+            "month": 4,
+            "day": 25
+        },
+        {
+            "artist": "The Walkmen",
+            "location": "Webster Hall",
+            "year": 2023,
+            "month": 4,
+            "day": 27
+        },
+        {
+            "artist": "Screaming Females",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 4,
+            "day": 28
+        },
+        {
+            "artist": "Mannequin Pussy",
+            "location": "The Cobalt",
+            "year": 2023,
+            "month": 5,
+            "day": 7
+        },
+        {
+            "artist": "Deli Girls",
+            "location": "The Brooklyn Monarch",
+            "year": 2023,
+            "month": 5,
+            "day": 11
+        },
+        {
+            "artist": "Helen",
+            "location": "Union Pool",
+            "year": 2023,
+            "month": 5,
+            "day": 20
+        },
+        {
+            "artist": "Beach Bunny + PUP",
+            "location": "Pier 17",
+            "year": 2023,
+            "month": 5,
+            "day": 23
+        },
+        {
+            "artist": "Soul Glo",
+            "location": "Tompkins Square Park",
+            "year": 2023,
+            "month": 5,
+            "day": 26
+        },
+        {
+            "artist": "Brutus",
+            "location": "Gramercy Theatre",
+            "year": 2023,
+            "month": 5,
+            "day": 30
+        },
+        {
+            "artist": "Haley Blais",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 6,
+            "day": 1
+        },
+        {
+            "artist": "Frankie Rose",
+            "location": "TV Eye",
+            "year": 2023,
+            "month": 6,
+            "day": 8
+        },
+        {
+            "artist": "Drug Church",
+            "location": "Saint Vitus Bar",
+            "year": 2023,
+            "month": 6,
+            "day": 8
+        },
+        {
+            "artist": "black midi",
+            "location": "Irving Plaza",
+            "year": 2023,
+            "month": 6,
+            "day": 9
+        },
+        {
+            "artist": "Wednesday",
+            "location": "Music Hall of Williamsburg",
+            "year": 2023,
+            "month": 6,
+            "day": 20
+        },
+        {
+            "artist": "Jimmy Whispers + Lionlimb",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 6,
+            "day": 21
+        },
+        {
+            "artist": "Zola Jesus",
+            "location": "Le Poisson Rouge",
+            "year": 2023,
+            "month": 6,
+            "day": 22
+        },
+        {
+            "artist": "Tears for Fears",
+            "location": "Madison Square Garden",
+            "year": 2023,
+            "month": 6,
+            "day": 26
+        },
+        {
+            "artist": "Sky Ferreira",
+            "location": "Knockdown Center",
+            "year": 2023,
+            "month": 7,
+            "day": 2
+        },
+        {
+            "artist": "Skating Polly",
+            "location": "Saint Vitus Bar",
+            "year": 2023,
+            "month": 7,
+            "day": 6
+        },
+        {
+            "artist": "Big Joanie",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 7,
+            "day": 10
+        },
+        {
+            "artist": "Palehound",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 7,
+            "day": 13
+        },
+        {
+            "artist": "Grace Ives",
+            "location": "Sleeping Village",
+            "year": 2023,
+            "month": 7,
+            "day": 20
+        },
+        {
+            "artist": "Pitchfork Music Festival",
+            "location": "Union Park",
+            "year": 2023,
+            "month": 7,
+            "day": 21,
+            "year_end": 2023,
+            "month_end": 7,
+            "day_end": 23
+        },
+        {
+            "artist": "Rumble Aftershow",
+            "location": "Cobra Lounge",
+            "year": 2023,
+            "month": 7,
+            "day": 22
+        },
+        {
+            "artist": "Le Tigre",
+            "location": "Brooklyn Steel",
+            "year": 2023,
+            "month": 7,
+            "day": 28
+        },
+        {
+            "artist": "Gouge Away",
+            "location": "Market Hotel",
+            "year": 2023,
+            "month": 8,
+            "day": 5
+        },
+        {
+            "artist": "Sloppy Jane",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 8,
+            "day": 20
+        },
+        {
+            "artist": "Water From Your Eyes",
+            "location": "Pier 36",
+            "year": 2023,
+            "month": 8,
+            "day": 24
+        },
+        {
+            "artist": "Sloppy Jane",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 8,
+            "day": 27
+        },
+        {
+            "artist": "Sorry Mom",
+            "location": "Skyport Marina",
+            "year": 2023,
+            "month": 9,
+            "day": 7
+        },
+        {
+            "artist": "Downtown Boys",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 9,
+            "day": 12
+        },
+        {
+            "artist": "L7",
+            "location": "Gramercy Theatre",
+            "year": 2023,
+            "month": 9,
+            "day": 17
+        },
+        {
+            "artist": "Chat Pile",
+            "location": "Le Poisson Rouge",
+            "year": 2023,
+            "month": 9,
+            "day": 20
+        },
+        {
+            "artist": "Death Grips",
+            "location": "Brooklyn Steel",
+            "year": 2023,
+            "month": 9,
+            "day": 21
+        },
+        {
+            "artist": "Hanabie",
+            "location": "Gramercy Theatre",
+            "year": 2023,
+            "month": 9,
+            "day": 24
+        },
+        {
+            "artist": "Movements",
+            "location": "Brooklyn Steel",
+            "year": 2023,
+            "month": 9,
+            "day": 27
+        },
+        {
+            "artist": "Scowl",
+            "location": "The Meadows",
+            "year": 2023,
+            "month": 9,
+            "day": 29
+        },
+        {
+            "artist": "Peelander-Z",
+            "location": "The Meadows",
+            "year": 2023,
+            "month": 10,
+            "day": 1
+        },
+        {
+            "artist": "Soul Glo + Zulu",
+            "location": "The Meadows",
+            "year": 2023,
+            "month": 10,
+            "day": 3
+        },
+        {
+            "artist": "Rocket Pengwin",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 10,
+            "day": 8
+        },
+        {
+            "artist": "Sextile",
+            "location": "The Meadows",
+            "year": 2023,
+            "month": 10,
+            "day": 12
+        },
+        {
+            "artist": "Electric Six",
+            "location": "The Meadows",
+            "year": 2023,
+            "month": 10,
+            "day": 13
+        },
+        {
+            "artist": "Crush Fund",
+            "location": "Hart Bar",
+            "year": 2023,
+            "month": 10,
+            "day": 14
+        },
+        {
+            "artist": "yeule",
+            "location": "Webster Hall",
+            "year": 2023,
+            "month": 10,
+            "day": 15
+        },
+        {
+            "artist": "The Beths",
+            "location": "Music Hall of Williamsburg",
+            "year": 2023,
+            "month": 10,
+            "day": 17
+        },
+        {
+            "artist": "Palehound",
+            "location": "The Bowery Ballroom",
+            "year": 2023,
+            "month": 10,
+            "day": 19
+        },
+        {
+            "artist": "Depeche Mode",
+            "location": "Barclays Center",
+            "year": 2023,
+            "month": 10,
+            "day": 21
+        },
+        {
+            "artist": "Pigs Pigs Pigs Pigs Pigs Pigs Pigs",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 11,
+            "day": 3
+        },
+        {
+            "artist": "Horsegirl",
+            "location": "Ridgewood Presbyterian Church",
+            "year": 2023,
+            "month": 11,
+            "day": 9
+        },
+        {
+            "artist": "Sasami",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 11,
+            "day": 10
+        },
+        {
+            "artist": "Botch",
+            "location": "Webster Hall",
+            "year": 2023,
+            "month": 11,
+            "day": 11
+        },
+        {
+            "artist": "The Armed",
+            "location": "Irving Plaza",
+            "year": 2023,
+            "month": 11,
+            "day": 17
+        },
+        {
+            "artist": "Special Interest",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 11,
+            "day": 25
+        },
+        {
+            "artist": "Cattle Decapitation",
+            "location": "Warsaw",
+            "year": 2023,
+            "month": 11,
+            "day": 30
+        },
+        {
+            "artist": "Spy",
+            "location": "TV Eye",
+            "year": 2023,
+            "month": 12,
+            "day": 1
+        },
+        {
+            "artist": "Mandy, Indiana",
+            "location": "Baby's All Right",
+            "year": 2023,
+            "month": 12,
+            "day": 2
+        },
+        {
+            "artist": "Mannequin Pussy + Scowl",
+            "location": "Saint Vitus Bar",
+            "year": 2023,
+            "month": 12,
+            "day": 3
+        },
+        {
+            "artist": "Scowl + Jivebomb",
+            "location": "Saint Vitus Bar",
+            "year": 2023,
+            "month": 12,
+            "day": 4
+        },
+        {
+            "artist": "Angel Du$t",
+            "location": "Elsewhere",
+            "year": 2023,
+            "month": 12,
+            "day": 10
+        },
+        {
+            "artist": "Yo La Tengo",
+            "location": "The Bowery Ballroom",
+            "year": 2023,
+            "month": 12,
+            "day": 12
+        },
+        {
+            "artist": "Model/Actriz",
+            "location": "Music Hall of Williamsburg",
+            "year": 2023,
+            "month": 12,
+            "day": 13
+        },
+        {
+            "artist": "100 gecs",
+            "location": "Knockdown Center",
+            "year": 2023,
+            "month": 12,
+            "day": 14
+        },
+        {
+            "artist": "The Bobby Lees",
+            "location": "The Bowery Ballroom",
+            "year": 2023,
+            "month": 12,
+            "day": 20
+        }
+    ]
+}
