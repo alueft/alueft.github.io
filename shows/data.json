@@ -145,6 +145,7 @@
         {
             "artist": "Tomberlin",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 1,
             "day": 13
@@ -152,6 +153,7 @@
         {
             "artist": "We Are Scientists",
             "location": "Brooklyn Made",
+            "metro": "NYC",
             "year": 2023,
             "month": 1,
             "day": 20
@@ -159,6 +161,7 @@
         {
             "artist": "Final Girls",
             "location": "Saint Vitus Bar",
+            "metro": "NYC",
             "year": 2023,
             "month": 1,
             "day": 24
@@ -166,6 +169,7 @@
         {
             "artist": "Abortion Access Benefit Series",
             "location": "The Bowery Ballroom",
+            "metro": "NYC",
             "year": 2023,
             "month": 1,
             "day": 28
@@ -173,6 +177,7 @@
         {
             "artist": "Dry Cleaning",
             "location": "Pioneer Works",
+            "metro": "NYC",
             "year": 2023,
             "month": 2,
             "day": 2
@@ -180,6 +185,7 @@
         {
             "artist": "Angel Olsen",
             "location": "White Eagle Hall",
+            "metro": "NYC",
             "year": 2023,
             "month": 2,
             "day": 6
@@ -187,6 +193,7 @@
         {
             "artist": "Viagra Boys",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 2,
             "day": 17
@@ -194,6 +201,7 @@
         {
             "artist": "Screaming Females Garden Party",
             "location": "White Eagle Hall",
+            "metro": "NYC",
             "year": 2023,
             "month": 2,
             "day": 18
@@ -201,6 +209,7 @@
         {
             "artist": "Clown Core",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 2,
             "day": 21
@@ -208,6 +217,7 @@
         {
             "artist": "Otoboke Beaver",
             "location": "Le Poisson Rouge",
+            "metro": "NYC",
             "year": 2023,
             "month": 2,
             "day": 22
@@ -215,6 +225,7 @@
         {
             "artist": "Knifeplay",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 2,
             "day": 25
@@ -222,6 +233,7 @@
         {
             "artist": "Thick",
             "location": "Racket",
+            "metro": "NYC",
             "year": 2023,
             "month": 3,
             "day": 2
@@ -229,6 +241,7 @@
         {
             "artist": "Hide",
             "location": "TV Eye",
+            "metro": "NYC",
             "year": 2023,
             "month": 3,
             "day": 3
@@ -236,6 +249,7 @@
         {
             "artist": "Clan of Xymox",
             "location": "The Brooklyn Monarch",
+            "metro": "NYC",
             "year": 2023,
             "month": 3,
             "day": 10
@@ -243,6 +257,7 @@
         {
             "artist": "Show Me the Body",
             "location": "Brooklyn Steel",
+            "metro": "NYC",
             "year": 2023,
             "month": 3,
             "day": 24
@@ -250,6 +265,7 @@
         {
             "artist": "Scowl",
             "location": "Rough Trade",
+            "metro": "NYC",
             "year": 2023,
             "month": 4,
             "day": 6
@@ -257,6 +273,7 @@
         {
             "artist": "Emma Ruth Rundle",
             "location": "Le Poisson Rouge",
+            "metro": "NYC",
             "year": 2023,
             "month": 4,
             "day": 9
@@ -264,6 +281,7 @@
         {
             "artist": "Black Belt Eagle Scout",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 4,
             "day": 15
@@ -271,6 +289,7 @@
         {
             "artist": "Gel",
             "location": "Saint Vitus Bar",
+            "metro": "NYC",
             "year": 2023,
             "month": 4,
             "day": 22
@@ -278,6 +297,7 @@
         {
             "artist": "Marissa Nadler",
             "location": "Public Records",
+            "metro": "NYC",
             "year": 2023,
             "month": 4,
             "day": 25
@@ -285,6 +305,7 @@
         {
             "artist": "The Walkmen",
             "location": "Webster Hall",
+            "metro": "NYC",
             "year": 2023,
             "month": 4,
             "day": 27
@@ -292,6 +313,7 @@
         {
             "artist": "Screaming Females",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 4,
             "day": 28
@@ -299,6 +321,7 @@
         {
             "artist": "Mannequin Pussy",
             "location": "The Cobalt",
+            "metro": "Vancouver",
             "year": 2023,
             "month": 5,
             "day": 7
@@ -306,6 +329,7 @@
         {
             "artist": "Deli Girls",
             "location": "The Brooklyn Monarch",
+            "metro": "NYC",
             "year": 2023,
             "month": 5,
             "day": 11
@@ -313,6 +337,7 @@
         {
             "artist": "Helen",
             "location": "Union Pool",
+            "metro": "NYC",
             "year": 2023,
             "month": 5,
             "day": 20
@@ -320,6 +345,7 @@
         {
             "artist": "Beach Bunny + PUP",
             "location": "Pier 17",
+            "metro": "NYC",
             "year": 2023,
             "month": 5,
             "day": 23
@@ -327,6 +353,7 @@
         {
             "artist": "Soul Glo",
             "location": "Tompkins Square Park",
+            "metro": "NYC",
             "year": 2023,
             "month": 5,
             "day": 26
@@ -334,6 +361,7 @@
         {
             "artist": "Brutus",
             "location": "Gramercy Theatre",
+            "metro": "NYC",
             "year": 2023,
             "month": 5,
             "day": 30
@@ -341,6 +369,7 @@
         {
             "artist": "Haley Blais",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 1
@@ -348,6 +377,7 @@
         {
             "artist": "Frankie Rose",
             "location": "TV Eye",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 8
@@ -355,6 +385,7 @@
         {
             "artist": "Drug Church",
             "location": "Saint Vitus Bar",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 8
@@ -362,6 +393,7 @@
         {
             "artist": "black midi",
             "location": "Irving Plaza",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 9
@@ -369,6 +401,7 @@
         {
             "artist": "Wednesday",
             "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 20
@@ -376,6 +409,7 @@
         {
             "artist": "Jimmy Whispers + Lionlimb",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 21
@@ -383,6 +417,7 @@
         {
             "artist": "Zola Jesus",
             "location": "Le Poisson Rouge",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 22
@@ -390,6 +425,7 @@
         {
             "artist": "Tears for Fears",
             "location": "Madison Square Garden",
+            "metro": "NYC",
             "year": 2023,
             "month": 6,
             "day": 26
@@ -397,6 +433,7 @@
         {
             "artist": "Sky Ferreira",
             "location": "Knockdown Center",
+            "metro": "NYC",
             "year": 2023,
             "month": 7,
             "day": 2
@@ -404,6 +441,7 @@
         {
             "artist": "Skating Polly",
             "location": "Saint Vitus Bar",
+            "metro": "NYC",
             "year": 2023,
             "month": 7,
             "day": 6
@@ -411,6 +449,7 @@
         {
             "artist": "Big Joanie",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 7,
             "day": 10
@@ -418,6 +457,7 @@
         {
             "artist": "Palehound",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 7,
             "day": 13
@@ -425,6 +465,7 @@
         {
             "artist": "Grace Ives",
             "location": "Sleeping Village",
+            "metro": "Chicago",
             "year": 2023,
             "month": 7,
             "day": 20
@@ -432,6 +473,7 @@
         {
             "artist": "Pitchfork Music Festival",
             "location": "Union Park",
+            "metro": "Chicago",
             "year": 2023,
             "month": 7,
             "day": 21,
@@ -442,6 +484,7 @@
         {
             "artist": "Rumble Aftershow",
             "location": "Cobra Lounge",
+            "metro": "Chicago",
             "year": 2023,
             "month": 7,
             "day": 22
@@ -449,6 +492,7 @@
         {
             "artist": "Le Tigre",
             "location": "Brooklyn Steel",
+            "metro": "NYC",
             "year": 2023,
             "month": 7,
             "day": 28
@@ -456,6 +500,7 @@
         {
             "artist": "Gouge Away",
             "location": "Market Hotel",
+            "metro": "NYC",
             "year": 2023,
             "month": 8,
             "day": 5
@@ -463,6 +508,7 @@
         {
             "artist": "Sloppy Jane",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 8,
             "day": 20
@@ -470,6 +516,7 @@
         {
             "artist": "Water From Your Eyes",
             "location": "Pier 36",
+            "metro": "NYC",
             "year": 2023,
             "month": 8,
             "day": 24
@@ -477,6 +524,7 @@
         {
             "artist": "Sloppy Jane",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 8,
             "day": 27
@@ -484,6 +532,7 @@
         {
             "artist": "Sorry Mom",
             "location": "Skyport Marina",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 7
@@ -491,6 +540,7 @@
         {
             "artist": "Downtown Boys",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 12
@@ -498,6 +548,7 @@
         {
             "artist": "L7",
             "location": "Gramercy Theatre",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 17
@@ -505,6 +556,7 @@
         {
             "artist": "Chat Pile",
             "location": "Le Poisson Rouge",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 20
@@ -512,6 +564,7 @@
         {
             "artist": "Death Grips",
             "location": "Brooklyn Steel",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 21
@@ -519,6 +572,7 @@
         {
             "artist": "Hanabie",
             "location": "Gramercy Theatre",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 24
@@ -526,6 +580,7 @@
         {
             "artist": "Movements",
             "location": "Brooklyn Steel",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 27
@@ -533,6 +588,7 @@
         {
             "artist": "Scowl",
             "location": "The Meadows",
+            "metro": "NYC",
             "year": 2023,
             "month": 9,
             "day": 29
@@ -540,6 +596,7 @@
         {
             "artist": "Peelander-Z",
             "location": "The Meadows",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 1
@@ -547,6 +604,7 @@
         {
             "artist": "Soul Glo + Zulu",
             "location": "The Meadows",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 3
@@ -554,6 +612,7 @@
         {
             "artist": "Rocket Pengwin",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 8
@@ -561,6 +620,7 @@
         {
             "artist": "Sextile",
             "location": "The Meadows",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 12
@@ -568,6 +628,7 @@
         {
             "artist": "Electric Six",
             "location": "The Meadows",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 13
@@ -575,6 +636,7 @@
         {
             "artist": "Crush Fund",
             "location": "Hart Bar",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 14
@@ -582,6 +644,7 @@
         {
             "artist": "yeule",
             "location": "Webster Hall",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 15
@@ -589,6 +652,7 @@
         {
             "artist": "The Beths",
             "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 17
@@ -596,6 +660,7 @@
         {
             "artist": "Palehound",
             "location": "The Bowery Ballroom",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 19
@@ -603,6 +668,7 @@
         {
             "artist": "Depeche Mode",
             "location": "Barclays Center",
+            "metro": "NYC",
             "year": 2023,
             "month": 10,
             "day": 21
@@ -610,6 +676,7 @@
         {
             "artist": "Pigs Pigs Pigs Pigs Pigs Pigs Pigs",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 11,
             "day": 3
@@ -617,6 +684,7 @@
         {
             "artist": "Horsegirl",
             "location": "Ridgewood Presbyterian Church",
+            "metro": "NYC",
             "year": 2023,
             "month": 11,
             "day": 9
@@ -624,6 +692,7 @@
         {
             "artist": "Sasami",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 11,
             "day": 10
@@ -631,6 +700,7 @@
         {
             "artist": "Botch",
             "location": "Webster Hall",
+            "metro": "NYC",
             "year": 2023,
             "month": 11,
             "day": 11
@@ -638,6 +708,7 @@
         {
             "artist": "The Armed",
             "location": "Irving Plaza",
+            "metro": "NYC",
             "year": 2023,
             "month": 11,
             "day": 17
@@ -645,6 +716,7 @@
         {
             "artist": "Special Interest",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 11,
             "day": 25
@@ -652,6 +724,7 @@
         {
             "artist": "Cattle Decapitation",
             "location": "Warsaw",
+            "metro": "NYC",
             "year": 2023,
             "month": 11,
             "day": 30
@@ -659,6 +732,7 @@
         {
             "artist": "Spy",
             "location": "TV Eye",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 1
@@ -666,6 +740,7 @@
         {
             "artist": "Mandy, Indiana",
             "location": "Baby's All Right",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 2
@@ -673,6 +748,7 @@
         {
             "artist": "Mannequin Pussy + Scowl",
             "location": "Saint Vitus Bar",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 3
@@ -680,6 +756,7 @@
         {
             "artist": "Scowl + Jivebomb",
             "location": "Saint Vitus Bar",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 4
@@ -687,6 +764,7 @@
         {
             "artist": "Angel Du$t",
             "location": "Elsewhere",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 10
@@ -694,6 +772,7 @@
         {
             "artist": "Yo La Tengo",
             "location": "The Bowery Ballroom",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 12
@@ -701,6 +780,7 @@
         {
             "artist": "Model/Actriz",
             "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 13
@@ -708,6 +788,7 @@
         {
             "artist": "100 gecs",
             "location": "Knockdown Center",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 14
@@ -715,6 +796,7 @@
         {
             "artist": "The Bobby Lees",
             "location": "The Bowery Ballroom",
+            "metro": "NYC",
             "year": 2023,
             "month": 12,
             "day": 20
