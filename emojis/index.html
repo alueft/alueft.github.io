@@ -47,7 +47,8 @@
             document.getElementById("name").textContent = "";
             document.getElementById("play").textContent = "reveal";
         } else {
-            document.getElementById("name").textContent = pic.replace(/_/g, " ").replace(".png", "");
+            var name = pic.replace(/_/g, " ").replace(".png", "");
+            document.getElementById("name").innerHTML = `<a target="_blank" href="https://duckduckgo.com/?q=${name} site:emojipedia.org">${name}</a>`;
             document.getElementById("play").textContent = "start";
         }
         done = !done;
