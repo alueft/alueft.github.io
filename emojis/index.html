@@ -1,0 +1,59 @@
+<html>
+<head>
+<style>
+#emoji {
+    display: block;
+    margin: 0 auto;
+    height: 50%;
+}
+#name {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    height: 25%;
+    width: min(100%, 500px);
+}
+#play {
+    font-size: 20px;
+    display: block;
+    margin: 0 auto;
+    height: 25%;
+    width: min(100%, 500px);
+}
+</style>
+</head>
+
+<body>
+
+<img id="emoji" src="images/clown_face.png"></img>
+<div id="name">clown face</div>
+<button id="play">start</button>
+
+</body>
+
+<script type="text/javascript">
+
+(async function() {
+    var resp = await fetch("pics.json");
+    var pics = await resp.json();
+    var done = true;
+    var pic;
+    document.getElementById("play").onclick = (event) => {
+        if (done) {
+            pic = pics[Math.floor(Math.random() * pics.length)];
+            document.getElementById("emoji").src = "images/"+pic;
+            document.getElementById("name").textContent = "";
+            document.getElementById("play").textContent = "reveal";
+        } else {
+            document.getElementById("name").textContent = pic.replace(/_/g, " ").replace(".png", "");
+            document.getElementById("play").textContent = "start";
+        }
+        done = !done;
+    }
+})()
+
+</script>
+
+</html>
