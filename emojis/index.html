@@ -38,6 +38,10 @@
 (async function() {
     var resp = await fetch("pics.json");
     var pics = await resp.json();
+    var params = new URLSearchParams(window.location.search);
+    if (params.get("filter")) {
+        pics = pics.filter(pic => pic.startsWith(params.get("filter")));
+    }
     var done = true;
     var pic;
     document.getElementById("play").onclick = (event) => {
