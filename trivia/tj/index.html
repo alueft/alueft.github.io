@@ -91,9 +91,13 @@ td {
         var old_tbody = document.getElementById("items");
         old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
         new_tbody.id = "items";
-    }    
+    }
     addEventListener("hashchange", update);
-    window.location.hash = "#c";
+    if (window.location.hash === "") {
+        window.location.hash = "#c";
+    } else {
+        update();
+    }
 })()
 
 </script>
