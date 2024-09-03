@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<style>
+a {
+    font-size: 24px;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+td {
+    text-align: center;
+}
+</style>
+<body>
+<a href="#">all</a>&nbsp;&nbsp;
+<a href="#a">a</a>&nbsp;&nbsp;
+<a href="#b">b</a>&nbsp;&nbsp;
+<a href="#c">c</a>&nbsp;&nbsp;
+<a href="#d">d</a>&nbsp;&nbsp;
+<a href="#e">e</a>&nbsp;&nbsp;
+<a href="#f">f</a>&nbsp;&nbsp;
+<a href="#g">g</a>&nbsp;&nbsp;
+<a href="#h">h</a>&nbsp;&nbsp;
+<a href="#i">i</a>&nbsp;&nbsp;
+<a href="#j">j</a>&nbsp;&nbsp;
+<a href="#k">k</a>&nbsp;&nbsp;
+<a href="#l">l</a>&nbsp;&nbsp;
+<a href="#m">m</a>&nbsp;&nbsp;
+<a href="#n">n</a>&nbsp;&nbsp;
+<a href="#o">o</a>&nbsp;&nbsp;
+<a href="#p">p</a>&nbsp;&nbsp;
+<a href="#q">q</a>&nbsp;&nbsp;
+<a href="#r">r</a>&nbsp;&nbsp;
+<a href="#s">s</a>&nbsp;&nbsp;
+<a href="#t">t</a>&nbsp;&nbsp;
+<a href="#u">u</a>&nbsp;&nbsp;
+<a href="#v">v</a>&nbsp;&nbsp;
+<a href="#w">w</a>&nbsp;&nbsp;
+<a href="#x">x</a>&nbsp;&nbsp;
+<a href="#y">y</a>&nbsp;&nbsp;
+<a href="#z">z</a>
+<table>
+<tbody id="items">
+</tbody>
+</table>
+</body>
+<script type="text/javascript">
+
+(async function() {
+    var resp = await fetch("data.json");
+    var json = await resp.json();
+    var items = [];
+    for (let key in json) {
+        items.push([json[key]["name"], json[key]["price"], key]);
+    }
+    function update() {
+        var display = [];
+        if (window.location.hash === "") {
+            display = items;
+        } else {
+            const re = RegExp("^" + window.location.hash.slice(1) + ".*$", "i");
+            items.forEach((item) => {
+                if (re.test(item[0])) {
+                    display.push(item);
+                }
+            });
+        }
+        display.sort();
+        var new_tbody = document.createElement("tbody");
+        display.forEach((item) => {
+            const row0 = document.createElement("tr");
+            const row1 = document.createElement("tr");
+            const img_cell = document.createElement("td");
+            const img = document.createElement("img");
+            img.src = "/images/" + item[2] + ".webp";
+            img.height = 120;
+            img_cell.appendChild(img);
+            img_cell.rowSpan = 2;
+            row0.appendChild(img_cell);
+            const name = document.createElement("td");
+            name.textContent = item[0];
+            row0.appendChild(name);
+            const price = document.createElement("td");
+            price.textContent = "$" + item[1];
+            price.style.fontSize = "24px";
+            row1.appendChild(price);
+            new_tbody.appendChild(row0);
+            new_tbody.appendChild(row1);
+        });
+        var old_tbody = document.getElementById("items");
+        old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
+        new_tbody.id = "items";
+    }    
+    addEventListener("hashchange", update);
+    window.location.hash = "#c";
+})()
+
+</script>
+</html>
