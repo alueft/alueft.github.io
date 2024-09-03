@@ -52,7 +52,7 @@ td {
     var json = await resp.json();
     var items = [];
     for (let key in json) {
-        items.push([json[key]["name"], json[key]["price"], key]);
+        items.push([json[key]["price"], json[key]["name"], key]);
     }
     function update() {
         var display = [];
@@ -61,7 +61,7 @@ td {
         } else {
             const re = RegExp("^" + window.location.hash.slice(1) + ".*$", "i");
             items.forEach((item) => {
-                if (re.test(item[0])) {
+                if (re.test(item[1])) {
                     display.push(item);
                 }
             });
@@ -79,10 +79,10 @@ td {
             img_cell.rowSpan = 2;
             row0.appendChild(img_cell);
             const name = document.createElement("td");
-            name.textContent = item[0];
+            name.textContent = item[1];
             row0.appendChild(name);
             const price = document.createElement("td");
-            price.textContent = "$" + item[1];
+            price.textContent = "$" + item[0];
             price.style.fontSize = "24px";
             row1.appendChild(price);
             new_tbody.appendChild(row0);
