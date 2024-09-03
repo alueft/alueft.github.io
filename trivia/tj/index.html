@@ -52,7 +52,7 @@ td {
     var json = await resp.json();
     var items = [];
     for (let key in json) {
-        items.push([json[key]["price"], json[key]["name"], key]);
+        items.push([parseFloat(json[key]["price"]), json[key]["name"], key]);
     }
     function update() {
         var display = [];
@@ -66,7 +66,12 @@ td {
                 }
             });
         }
-        display.sort();
+        display.sort((a, b) => {
+            if (a[0] != b[0]) {
+                return a[0] - b[0];
+            }
+            return a[1] > b[1];
+        });
         var new_tbody = document.createElement("tbody");
         display.forEach((item) => {
             const row0 = document.createElement("tr");
