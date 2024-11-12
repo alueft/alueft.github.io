@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<style>
+a {
+    font-size: 24px;
+}
+table {
+    margin-left: auto;
+    margin-right: auto;
+}
+td {
+    text-align: center;
+}
+</style>
+<body>
+<form action="/search.html" method="GET" accept-charset="utf-8">
+    <label for="category">Category:</label>
+    <select id="category" name="category">
+        <option value="beverages">Beverages</option>
+        <option value="breads-rolls-bakery">Breads, Rolls & Bakery</option>
+        <option value="dairy-eggs">Dairy & Eggs</option>
+        <option value="desserts">Desserts</option>
+        <option value="frozen-foods">Frozen Foods</option>
+        <option value="meat">Meat</option>
+        <option value="pantry-essentials">Pantry Essentials</option>
+        <option value="pet">Pet</option>
+        <option value="prepared-foods" selected>Prepared Foods</option>
+        <option value="produce">Produce</option>
+        <option value="seafood">Seafood</option>
+        <option value="snacks-chips-salsas-dips">Snacks, Chips, Salsas & Dips</option>
+    </select><br><br>
+
+    <label>Sort by:</label><br>
+    <input type="radio" id="price" name="sort" value="price" checked>
+    <label for="price">Price</label><br>
+    <input type="radio" id="name" name="sort" value="name">
+    <label for="name">Name</label><br><br>
+
+    <label for="brand">Add brand name:</label>
+    <select id="brand" name="brand">
+        <option value="yes">Yes</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>
