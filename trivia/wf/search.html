@@ -13,7 +13,7 @@ td {
 }
 </style>
 <body>
-<button onclick="location.href='/index.html'">back</button>
+<button onclick="location.href='index.html'">back</button>
 <br>
 <a href="#">all</a>&nbsp;&nbsp;
 <a href="#a">a</a>&nbsp;&nbsp;
@@ -52,7 +52,7 @@ td {
 (async function() {
     const params = new URLSearchParams(window.location.search);
     // category, sort, brand
-    var resp = await fetch(`/data/${params.get("category")}.json`);
+    var resp = await fetch(`data/${params.get("category")}.json`);
     var json = await resp.json();
     var items = [];
     for (let key in json) {
