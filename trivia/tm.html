@@ -27,7 +27,7 @@
             if (bc) {
                 year *= -1;
             }
-            events[i].innerHTML = events[i].innerHTML.("–", "–" + " (" + section.slice(0,-1) + ") ");
+            events[i].innerHTML = events[i].innerHTML.replace("–", "–" + " (" + section.slice(0,-1) + ") ");
             sortedEvents.push([year, section.slice(0,-1), events[i]]);
         }
     }
