@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body id="main">
+</body>
+<script type="text/javascript">
+
+(async function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const resp = await fetch("https://en.wikipedia.org/api/rest_v1/page/html/"+urlParams.get("date"));
+    var text = await resp.text();
+
+    // hack CSS
+    text = text.replace('<link rel="stylesheet" href="', '<link rel="stylesheet" href="https://en.wikipedia.org/');
+
+    document.open();
+    document.write(text);
+    document.close();
+
+    events = document.getElementsByTagName("li");
+    var sortedEvents = [];
+    for (var i = 0; i < events.length; i++) {
+        let section = events[i].parentElement.parentElement.parentElement.firstChild.id;
+        if (section === "Events" || section === "Births" || section === "Deaths") {
+            var yearText = events[i].textContent.split(" – ")[0].replace("AD","");
+            var bc = yearText.includes("BC");
+            var year = parseInt(yearText.replace("BC",""));
+            if (bc) {
+                year *= -1;
+            }
+            events[i].innerHTML = events[i].innerHTML.("–", "–" + " (" + section.slice(0,-1) + ") ");
+            sortedEvents.push([year, section.slice(0,-1), events[i]]);
+        }
+    }
+    // sort by reverse chronological order
+    sortedEvents.sort((a, b) => b[0] - a[0]);
+    console.log(sortedEvents);
+
+    var sortedEventsElement = document.createElement("section");
+    for (var i = 0; i < sortedEvents.length; i++) {
+        sortedEventsElement.appendChild(sortedEvents[i][2]);
+    }
+
+    // replace everything except the header
+    var header = document.body.children[0];
+    document.body.replaceChildren(header, sortedEventsElement);
+
+    // hack base attribute to make links work
+    let baseElement = document.querySelector("base");
+    if (!baseElement) {
+        baseElement = document.createElement("base");
+        document.head.appendChild(baseElement);
+    }
+    baseElement.href = "https://en.wikipedia.org/wiki/";
+})();
+
+</script>
+</html>
