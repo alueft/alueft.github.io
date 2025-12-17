@@ -1,5 +1,9 @@
 {
     "locations": {
+        "Alphaville": {
+            "lat": 40.7005262,
+            "lon": -73.9258167
+        },
         "Baby's All Right": {
             "lat": 40.7099599,
             "lon": -73.9634234
@@ -8,13 +12,25 @@
             "lat": 40.6825619,
             "lon": -73.9753463
         },
+        "The Beacon Theatre": {
+            "lat": 40.7804903,
+            "lon": -73.9811314
+        },
         "The Bowery Ballroom": {
             "lat": 40.7204368,
             "lon": -73.9933366
         },
+        "The Broadway": {
+            "lat": 40.6909367,
+            "lon": -73.9249072
+        },
         "Brooklyn Made": {
             "lat": 40.7071909,
             "lon": -73.9219994
+        },
+        "The Brooklyn Mirage": {
+            "lat": 40.7109008,
+            "lon": -73.9257679
         },
         "The Brooklyn Monarch": {
             "lat": 40.7109625,
@@ -32,6 +48,14 @@
             "lat": 41.8863874,
             "lon": -87.6667991
         },
+        "Dr. Martens Smith Street": {
+            "lat": 40.6882465,
+            "lon": -73.9892901
+        },
+        "DROM": {
+            "lat": 40.7253053,
+            "lon": -73.9842946
+        },
         "Elsewhere": {
             "lat": 40.7095211,
             "lon": -73.9232632
@@ -47,6 +71,10 @@
         "Irving Plaza": {
             "lat": 40.7349099,
             "lon": -73.9882699
+        },
+        "Kings Theatre": {
+            "lat": 40.6460103,
+            "lon": -73.9573556
         },
         "Knockdown Center": {
             "lat": 40.7152788,
@@ -68,9 +96,17 @@
             "lat": 40.7107761,
             "lon": -73.9366264
         },
+        "Mercury Lounge": {
+            "lat": 40.7221035,
+            "lon": -73.9867932
+        },
         "Music Hall of Williamsburg": {
             "lat": 40.7191523,
             "lon": -73.9617836
+        },
+        "The Opera House": {
+            "lat": 40.7136572,
+            "lon": -73.9642433
         },
         "Pier 17": {
             "lat": 40.705522,
@@ -112,6 +148,14 @@
             "lat": 41.9392866,
             "lon": -87.7212467
         },
+        "SummerStage": {
+            "lat": 40.7725884,
+            "lon": -73.9701952
+        },
+        "Terminal 5": {
+            "lat": 40.7697469,
+            "lon": -73.9927437
+        },
         "Tompkins Square Park": {
             "lat": 40.7264724,
             "lon": -73.9816871
@@ -142,6 +186,649 @@
         }
     },
     "shows": [
+        {
+            "artist": "Torres",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 10,
+            "day": 21
+        },
+        {
+            "artist": "Lucy Dacus",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 10,
+            "day": 25
+        },
+        {
+            "artist": "Lucy Dacus",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 10,
+            "day": 26
+        },
+        {
+            "artist": "Mannequin Pussy",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 10,
+            "day": 28
+        },
+        {
+            "artist": "Mannequin Pussy",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 10,
+            "day": 30
+        },
+        {
+            "artist": "Chastity Belt",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 11,
+            "day": 6
+        },
+        {
+            "artist": "Sloppy Jane",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 11,
+            "day": 7
+        },
+        {
+            "artist": "Dry Cleaning",
+            "location": "Market Hotel",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 11,
+            "day": 19
+        },
+        {
+            "artist": "Dry Cleaning",
+            "location": "Market Hotel",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 11,
+            "day": 20
+        },
+        {
+            "artist": "Wet Leg",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2021,
+            "month": 12,
+            "day": 9
+        },
+        {
+            "artist": "Screaming Females Garden Party",
+            "location": "White Eagle Hall",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 2,
+            "day": 12
+        },
+        {
+            "artist": "Gost",
+            "location": "Saint Vitus Bar",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 2,
+            "day": 14
+        },
+        {
+            "artist": "Chai",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 2,
+            "day": 15
+        },
+        {
+            "artist": "The Beths",
+            "location": "Webster Hall",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 2,
+            "day": 23
+        },
+        {
+            "artist": "Fenne Lily + Illuminati Hotties",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 2,
+            "day": 24
+        },
+        {
+            "artist": "Helena Hauff",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 3,
+            "day": 4
+        },
+        {
+            "artist": "Wet Leg",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 3,
+            "day": 10
+        },
+        {
+            "artist": "Horsegirl",
+            "location": "Market Hotel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 3,
+            "day": 22
+        },
+        {
+            "artist": "Sasami",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 3,
+            "day": 25
+        },
+        {
+            "artist": "Parquet Courts",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 4,
+            "day": 1
+        },
+        {
+            "artist": "Boy Harsher",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 4,
+            "day": 2
+        },
+        {
+            "artist": "Snail Mail",
+            "location": "Kings Theatre",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 4,
+            "day": 7
+        },
+        {
+            "artist": "Land of Talk",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 4,
+            "day": 29
+        },
+        {
+            "artist": "The Linda Lindas",
+            "location": "Mercury Lounge",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 1
+        },
+        {
+            "artist": "Sharon Van Etten",
+            "location": "Union Pool",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 6
+        },
+        {
+            "artist": "Lingua Ignota",
+            "location": "Le Poisson Rouge",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 7
+        },
+        {
+            "artist": "Mannequin Pussy",
+            "location": "Saint Vitus Bar",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 11
+        },
+        {
+            "artist": "Sunflower Bean",
+            "location": "Webster Hall",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 12
+        },
+        {
+            "artist": "Dry Cleaning",
+            "location": "Webster Hall",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 18
+        },
+        {
+            "artist": "Amyl and the Sniffers",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 19
+        },
+        {
+            "artist": "Grouper",
+            "location": "The Opera House",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 21
+        },
+        {
+            "artist": "Turnstile",
+            "location": "Knockdown Center",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 5,
+            "day": 22
+        },
+        {
+            "artist": "Tomberlin",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 6,
+            "day": 10
+        },
+        {
+            "artist": "King Woman",
+            "location": "Saint Vitus Bar",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 6,
+            "day": 18
+        },
+        {
+            "artist": "Bikini Kill",
+            "location": "Pier 17",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 7,
+            "day": 8
+        },
+        {
+            "artist": "Pitchfork Music Festival",
+            "location": "Union Park",
+            "metro": "Chicago",
+            "year": 2022,
+            "month": 7,
+            "day": 15,
+            "year_end": 2022,
+            "month_end": 7,
+            "day_end": 17
+        },
+        {
+            "artist": "Lucy Dacus",
+            "location": "SummerStage",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 7,
+            "day": 21
+        },
+        {
+            "artist": "Warpaint",
+            "location": "Brooklyn Made",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 7,
+            "day": 25
+        },
+        {
+            "artist": "Beach Bunny",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 8,
+            "day": 7
+        },
+        {
+            "artist": "Sharon Van Etten + Angel Olsen + Julien Baker",
+            "location": "SummerStage",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 8,
+            "day": 21
+        },
+        {
+            "artist": "Soft Cell",
+            "location": "The Beacon Theatre",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 8,
+            "day": 30
+        },
+        {
+            "artist": "Carpenter Brut",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 2
+        },
+        {
+            "artist": "Sheer Mag",
+            "location": "Union Pool",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 4
+        },
+        {
+            "artist": "Perturbator",
+            "location": "Irving Plaza",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 4
+        },
+        {
+            "artist": "Florence + the Machine",
+            "location": "Madison Square Garden",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 17
+        },
+        {
+            "artist": "Girlpool",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 22
+        },
+        {
+            "artist": "Amyl and the Sniffers",
+            "location": "Terminal 5",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 23
+        },
+        {
+            "artist": "Alice Glass",
+            "location": "Warsaw",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 25
+        },
+        {
+            "artist": "Chai",
+            "location": "Le Poisson Rouge",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 26
+        },
+        {
+            "artist": "Wolf Alice",
+            "location": "Terminal 5",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 27
+        },
+        {
+            "artist": "Pet Shop Boys + New Order",
+            "location": "Madison Square Garden",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 9,
+            "day": 28
+        },
+        {
+            "artist": "The Linda Lindas",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 2
+        },
+        {
+            "artist": "Turnstile",
+            "location": "The Brooklyn Mirage",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 3
+        },
+        {
+            "artist": "Otoboke Beaver",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 5
+        },
+        {
+            "artist": "Julia Shapiro",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 10
+        },
+        {
+            "artist": "Thick",
+            "location": "Saint Vitus Bar",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 15
+        },
+        {
+            "artist": "Soft Kill",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 21
+        },
+        {
+            "artist": "Illuminati Hotties",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 22
+        },
+        {
+            "artist": "Maneux + Rare DM + House of Harm",
+            "location": "The Brooklyn Monarch",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 10,
+            "day": 31
+        },
+        {
+            "artist": "Haley Blais",
+            "location": "Mercury Lounge",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 1
+        },
+        {
+            "artist": "Let's Eat Grandma",
+            "location": "Webster Hall",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 4
+        },
+        {
+            "artist": "Minuit Machine",
+            "location": "DROM",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 4
+        },
+        {
+            "artist": "Sorry Mom + Control Top",
+            "location": "Dr. Martens Smith Street",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 10
+        },
+        {
+            "artist": "Ceremony",
+            "location": "The Meadows",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 11
+        },
+        {
+            "artist": "Bartees Strange",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 15
+        },
+        {
+            "artist": "Alvvays",
+            "location": "Kings Theatre",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 16
+        },
+        {
+            "artist": "Youth of Today",
+            "location": "The Brooklyn Monarch",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 17
+        },
+        {
+            "artist": "Weeping Icon",
+            "location": "Alphaville",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 18
+        },
+        {
+            "artist": "LCD Soundsystem",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 27
+        },
+        {
+            "artist": "LCD Soundsystem",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 11,
+            "day": 30
+        },
+        {
+            "artist": "Kristine Leschper",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 1
+        },
+        {
+            "artist": "Dinosaur Jr.",
+            "location": "Terminal 5",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 3
+        },
+        {
+            "artist": "LCD Soundsystem",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 7
+        },
+        {
+            "artist": "Special Interest",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 8
+        },
+        {
+            "artist": "Sasami",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 12
+        },
+        {
+            "artist": "Wet Leg",
+            "location": "Webster Hall",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 13
+        },
+        {
+            "artist": "Tomberlin",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 15
+        },
+        {
+            "artist": "Lingua Ignota",
+            "location": "Pioneer Works",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 16
+        },
+        {
+            "artist": "Patti Smith",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 29
+        },
+        {
+            "artist": "Gel",
+            "location": "The Broadway",
+            "metro": "NYC",
+            "year": 2022,
+            "month": 12,
+            "day": 31
+        },
         {
             "artist": "Tomberlin",
             "location": "Baby's All Right",
