@@ -1,5 +1,9 @@
 {
     "locations": {
+        "148 Frost St": {
+            "lat": 40.7177481,
+            "lon": -73.9455213
+        },
         "Alphaville": {
             "lat": 40.7005262,
             "lon": -73.9258167
@@ -15,6 +19,10 @@
         "The Beacon Theatre": {
             "lat": 40.7804903,
             "lon": -73.9811314
+        },
+        "Berlin": {
+            "lat": 40.7229961,
+            "lon": -73.9860116
         },
         "The Bowery Ballroom": {
             "lat": 40.7204368,
@@ -36,9 +44,25 @@
             "lat": 40.7109625,
             "lon": -73.9362562
         },
+        "Brooklyn Museum": {
+            "lat": 40.6709546,
+            "lon": -73.9632948
+        },
+        "Brooklyn Paramount": {
+            "lat": 40.6902136,
+            "lon": -73.9811602
+        },
         "Brooklyn Steel": {
             "lat": 40.7193932,
             "lon": -73.9387466
+        },
+        "Bryant Park": {
+            "lat": 40.7537509,
+            "lon": -73.9835428
+        },
+        "Cassette": {
+            "lat": 40.702567,
+            "lon": -73.9011814
         },
         "The Cobalt": {
             "lat": 49.2765005,
@@ -59,6 +83,14 @@
         "Elsewhere": {
             "lat": 40.7095211,
             "lon": -73.9232632
+        },
+        "First Unitarian Congregational Society": {
+            "lat": 40.6953622,
+            "lon": -73.9926595
+        },
+        "Generation Records": {
+            "lat": 40.7288655,
+            "lon": -73.9991635
         },
         "Gramercy Theatre": {
             "lat": 40.7399075,
@@ -83,6 +115,10 @@
         "Le Poisson Rouge": {
             "lat": 40.7284254,
             "lon": -73.9998816
+        },
+        "Littlefield": {
+            "lat": 40.6784807,
+            "lon": -73.9833773
         },
         "Madison Square Garden": {
             "lat": 40.7505185,
@@ -124,6 +160,10 @@
             "lat": 40.6821013,
             "lon": -73.9865223
         },
+        "Purgatory": {
+            "lat": 40.6872342,
+            "lon": -73.9057388
+        },
         "Racket": {
             "lat": 40.7430035,
             "lon": -74.0058886
@@ -160,6 +200,10 @@
             "lat": 40.7264724,
             "lon": -73.9816871
         },
+        "Trans-Pecos": {
+            "lat": 40.696986,
+            "lon": -73.906323
+        },
         "TV Eye": {
             "lat": 40.6978683,
             "lon": -73.9052427
@@ -172,6 +216,10 @@
             "lat": 40.7150021,
             "lon": -73.9516171
         },
+        "Unruly Collective": {
+            "lat": 40.6889311,
+            "lon": -73.9059060
+        },
         "Warsaw": {
             "lat": 40.7223925,
             "lon": -73.9484695
@@ -183,6 +231,10 @@
         "White Eagle Hall": {
             "lat": 40.7250059,
             "lon": -74.0515395
+        },
+        "Wonderville": {
+            "lat": 40.6924111,
+            "lon": -73.9275164
         }
     },
     "shows": [
@@ -1487,6 +1539,745 @@
             "year": 2023,
             "month": 12,
             "day": 20
+        },
+        {
+            "artist": "Fixations",
+            "location": "Berlin",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 1,
+            "day": 10
+        },
+        {
+            "artist": "Pharmakon + Melissa",
+            "location": "Trans-Pecos",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 1,
+            "day": 18
+        },
+        {
+            "artist": "Wednesday",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 1,
+            "day": 25
+        },
+        {
+            "artist": "Reverend Kristin Michael Hayter",
+            "location": "Le Poisson Rouge",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 1,
+            "day": 26
+        },
+        {
+            "artist": "Raw Brigade",
+            "location": "Saint Vitus Bar",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 1,
+            "day": 27
+        },
+        {
+            "artist": "Tomberlin",
+            "location": "Cassette",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 2,
+            "day": 2
+        },
+        {
+            "artist": "L.O.T.I.O.N. Multinational Corporation",
+            "location": "TV Eye",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 2,
+            "day": 9
+        },
+        {
+            "artist": "Militarie Gun",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 2,
+            "day": 15
+        },
+        {
+            "artist": "Escuela Grind",
+            "location": "TV Eye",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 2,
+            "day": 16
+        },
+        {
+            "artist": "Oceanator",
+            "location": "Purgatory",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 2,
+            "day": 20
+        },
+        {
+            "artist": "Pharmakon",
+            "location": "Union Pool",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 2,
+            "day": 25
+        },
+        {
+            "artist": "Downtown Boys",
+            "location": "Brooklyn Museum",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 2
+        },
+        {
+            "artist": "Mannequin Pussy",
+            "location": "Rough Trade",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 4
+        },
+        {
+            "artist": "Alkaline Trio",
+            "location": "Knockdown Center",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 9
+        },
+        {
+            "artist": "Chelsea Wolfe",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 13
+        },
+        {
+            "artist": "Sleater-Kinney",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 14
+        },
+        {
+            "artist": "Dreamcrusher",
+            "location": "Market Hotel",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 15
+        },
+        {
+            "artist": "Sleater-Kinney",
+            "location": "Racket",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 16
+        },
+        {
+            "artist": "Hinds",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 19
+        },
+        {
+            "artist": "Sprints",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 21
+        },
+        {
+            "artist": "Otoboke Beaver",
+            "location": "Knockdown Center",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 22
+        },
+        {
+            "artist": "Kim Gordon",
+            "location": "Knockdown Center",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 23
+        },
+        {
+            "artist": "Dry Cleaning",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 25
+        },
+        {
+            "artist": "Dry Cleaning",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 3,
+            "day": 26
+        },
+        {
+            "artist": "Haley Blais",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 4,
+            "day": 5
+        },
+        {
+            "artist": "Anita Velveeta + ok, cuddle",
+            "location": "148 Frost St",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 4,
+            "day": 6
+        },
+        {
+            "artist": "Land of Talk",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 4,
+            "day": 8
+        },
+        {
+            "artist": "Crush Fund",
+            "location": "The Broadway",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 4,
+            "day": 12
+        },
+        {
+            "artist": "Metz",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 4,
+            "day": 19
+        },
+        {
+            "artist": "Mandy, Indiana",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 4,
+            "day": 23
+        },
+        {
+            "artist": "Bratmobile",
+            "location": "Warsaw",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 4,
+            "day": 27
+        },
+        {
+            "artist": "cumgirl8",
+            "location": "Brooklyn Made",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 2
+        },
+        {
+            "artist": "Chastity Belt",
+            "location": "Warsaw",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 7
+        },
+        {
+            "artist": "Orchid",
+            "location": "Warsaw",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 9
+        },
+        {
+            "artist": "Jesus Piece + Sanguisugabogg",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 10
+        },
+        {
+            "artist": "Mannequin Pussy",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 16
+        },
+        {
+            "artist": "Julia Holter",
+            "location": "Webster Hall",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 17
+        },
+        {
+            "artist": "Drain",
+            "location": "The Brooklyn Monarch",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 19
+        },
+        {
+            "artist": "Radiator Hospital + Noun",
+            "location": "Cassette",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 20
+        },
+        {
+            "artist": "Gladie",
+            "location": "The Broadway",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 21
+        },
+        {
+            "artist": "Gustaf",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 23
+        },
+        {
+            "artist": "Knocked Loose",
+            "location": "Brooklyn Steel",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 30
+        },
+        {
+            "artist": "Crush Fund",
+            "location": "Purgatory",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 5,
+            "day": 31
+        },
+        {
+            "artist": "Melt-Banana",
+            "location": "Elsewhere",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 5
+        },
+        {
+            "artist": "Gustaf",
+            "location": "Union Pool",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 6
+        },
+        {
+            "artist": "ok, cuddle",
+            "location": "The Broadway",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 8
+        },
+        {
+            "artist": "English Teacher",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 10
+        },
+        {
+            "artist": "Liturgy",
+            "location": "Le Poisson Rouge",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 15
+        },
+        {
+            "artist": "Dillinger Escape Plan",
+            "location": "Brooklyn Paramount",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 21
+        },
+        {
+            "artist": "Outline Fest (The Armed + King Woman + Chat Pile + Ragana + Couch Slut)",
+            "location": "Knockdown Center",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 22
+        },
+        {
+            "artist": "Mercy Ruin",
+            "location": "Unruly Collective",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 23
+        },
+        {
+            "artist": "Horsegirl",
+            "location": "Bryant Park",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 29
+        },
+        {
+            "artist": "Gustaf",
+            "location": "Berlin",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 6,
+            "day": 30
+        },
+        {
+            "artist": "Marissa Nadler",
+            "location": "TV Eye",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 7,
+            "day": 6
+        },
+        {
+            "artist": "VR Sex",
+            "location": "Market Hotel",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 7,
+            "day": 13
+        },
+        {
+            "artist": "Pitchfork Music Festival",
+            "location": "Union Park",
+            "metro": "Chicago",
+            "year": 2024,
+            "month": 7,
+            "day": 19,
+            "year_end": 2024,
+            "month_end": 7,
+            "day_end": 21
+        },
+        {
+            "artist": "Model/Actriz + Water From Your Eyes",
+            "location": "Pier 36",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 7,
+            "day": 25
+        },
+        {
+            "artist": "Spaced",
+            "location": "Generation Records",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 7,
+            "day": 27
+        },
+        {
+            "artist": "Control Top",
+            "location": "Union Pool",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 7,
+            "day": 27
+        },
+        {
+            "artist": "Couch Slut + Ragana",
+            "location": "Trans-Pecos",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 8,
+            "day": 1
+        },
+        {
+            "artist": "Gel",
+            "location": "Rough Trade",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 8,
+            "day": 16
+        },
+        {
+            "artist": "Strawberry Glass + Orca Bones",
+            "location": "Wonderville",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 8,
+            "day": 25
+        },
+        {
+            "artist": "Bikini Kill",
+            "location": "Brooklyn Paramount",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 8
+        },
+        {
+            "artist": "Charly Bliss",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 9
+        },
+        {
+            "artist": "St. Vincent",
+            "location": "Brooklyn Paramount",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 11
+        },
+        {
+            "artist": "Militarie Gun",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 12
+        },
+        {
+            "artist": "PJ Harvey",
+            "location": "Terminal 5",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 16
+        },
+        {
+            "artist": "Brutus",
+            "location": "Brooklyn Made",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 17
+        },
+        {
+            "artist": "Special Interest",
+            "location": "Le Poisson Rouge",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 21
+        },
+        {
+            "artist": "Speed",
+            "location": "Le Poisson Rouge",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 25
+        },
+        {
+            "artist": "Sprints",
+            "location": "Music Hall of Williamsburg",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 9,
+            "day": 28
+        },
+        {
+            "artist": "Sunflower Bean",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 2
+        },
+        {
+            "artist": "cumgirl8",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 5
+        },
+        {
+            "artist": "KEN Mode + Hide",
+            "location": "TV Eye",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 10
+        },
+        {
+            "artist": "Yard Act",
+            "location": "Irving Plaza",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 12
+        },
+        {
+            "artist": "Fontaines D.C.",
+            "location": "Brooklyn Paramount",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 15
+        },
+        {
+            "artist": "Ekko Astral",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 17
+        },
+        {
+            "artist": "illuminati hotties",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 18
+        },
+        {
+            "artist": "Gel",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 19
+        },
+        {
+            "artist": "Drug Church",
+            "location": "The Brooklyn Monarch",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 24
+        },
+        {
+            "artist": "Banks",
+            "location": "Irving Plaza",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 25
+        },
+        {
+            "artist": "Hinds",
+            "location": "Warsaw",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 10,
+            "day": 29
+        },
+        {
+            "artist": "Emma Ruth Rundle",
+            "location": "Littlefield",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 11,
+            "day": 1
+        },
+        {
+            "artist": "Pharmakon",
+            "location": "TV Eye",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 11,
+            "day": 2
+        },
+        {
+            "artist": "ok, cuddle",
+            "location": "Purgatory",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 11,
+            "day": 8
+        },
+        {
+            "artist": "Slow Pulp",
+            "location": "Webster Hall",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 11,
+            "day": 15
+        },
+        {
+            "artist": "Chat Pile",
+            "location": "Le Poisson Rouge",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 11,
+            "day": 16
+        },
+        {
+            "artist": "Lambrini Girls",
+            "location": "Baby's All Right",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 12,
+            "day": 4
+        },
+        {
+            "artist": "Model/Actriz",
+            "location": "TV Eye",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 12,
+            "day": 5
+        },
+        {
+            "artist": "Chelsea Wolfe",
+            "location": "First Unitarian Congregational Society",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 12,
+            "day": 6
+        },
+        {
+            "artist": "Yo La Tengo",
+            "location": "The Bowery Ballroom",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 12,
+            "day": 25
+        },
+        {
+            "artist": "Gustaf",
+            "location": "Alphaville",
+            "metro": "NYC",
+            "year": 2024,
+            "month": 12,
+            "day": 31
         }
     ]
 }
