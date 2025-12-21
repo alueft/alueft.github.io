@@ -56,10 +56,11 @@
     <div id="slider"></div>
     <div id="bottom">
       <div id="dates">
-        displaying shows between <span id="start">2021-10-21</span> and <span id="end">2024-12-31</span>
+        displaying shows between <span id="start">2021-10-21</span> and <span id="end">2025-12-14</span>
         <br>
-        (including <input type="checkbox" id="vancouver" name="vancouver" checked /><label for="vancouver"> Vancouver</label>, 
-        <input type="checkbox" id="chicago" name="chicago" checked /><label for="chicago"> Chicago</label>, and
+        (including <input type="checkbox" id="vancouver" name="vancouver" checked /><label for="vancouver"> Vancouver</label>,
+        <input type="checkbox" id="chicago" name="chicago" checked /><label for="chicago"> Chicago</label>,
+        <input type="checkbox" id="philadelphia" name="philadelphia" checked /><label for="chicago"> Philadelphia</label>, and
         <input type="checkbox" id="nyc" name="nyc" checked /><label for="nyc"> NYC</label>)
       </div>
       <div id="map"></div>
@@ -73,15 +74,18 @@
 
         var slider = document.getElementById('slider');
 
+        const date_min = new Date(2021,10-1,21).getTime();
+        const date_max = new Date(2025,12-1,14).getTime();
+
         noUiSlider.create(slider, {
           connect: true,
           behaviour: 'drag',
           range: {
-            'min': new Date(2021,9,21).getTime(),
-            'max': new Date(2024,11,31).getTime()
+            'min': date_min,
+            'max': date_max,
           },
           step: 7 * 24 * 60 * 60 * 1000,  // 1 week
-          start: [new Date(2021,9,21).getTime(),new Date(2024,11,31).getTime()],
+          start: [date_min,date_max],
           pips: {
             mode: 'range',
             density: 100/11,
@@ -131,7 +135,7 @@
           }
         }
 
-        ['vancouver', 'chicago', 'nyc'].forEach((metro) => {
+        ['vancouver', 'chicago', 'philadelphia', 'nyc'].forEach((metro) => {
           document.getElementById(metro).addEventListener('click', () => {
             updateMarkers();
           });
