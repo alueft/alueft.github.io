@@ -23,7 +23,7 @@
         if (section === "Events" || section === "Births" || section === "Deaths") {
             var yearText = events[i].textContent.split(" – ")[0].replace("AD","");
             var bc = yearText.includes("BC");
-            var year = parseInt(yearText.replace("BC",""));
+            var year = parseInt(yearText.replace("BC","").replace("Before ",""));
             if (bc) {
                 year *= -1;
             }
